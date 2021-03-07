@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
@@ -61,40 +61,39 @@
 			background-size: cover;
 			}
 			
-        			.navbar {
-    overflow: hidden;
-    background-color: #ad0028;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        	.navbar {
+				overflow: hidden;
+				background-color: #ad0028;
+				font-family: Arial, Helvetica, sans-serif;
+			}
 
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+			.navbar a {
+				float: left;
+				font-size: 16px;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
+			.dropdown {
+				float: left;
+				overflow: hidden;
+			}
 
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+			.dropdown .dropbtn {
+				font-size: 16px;    
+				border: none;
+				outline: none;
+				color: white;
+				padding: 14px 16px;
+				background-color: inherit;
+				font-family: inherit;
+				margin: 0;
+			}
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			}
 			.dropdown-content {
 				display: none;
 				position: absolute;
@@ -120,11 +119,62 @@
 			.dropdown:hover .dropdown-content {
 				display: block;
 			}
-			#line_block {  
+			.line_block {  
 			float:left; 
 			padding-top:20px;
 			text-align:center;
 			}
+			.rating {
+	}
+.rating:not(:checked) > input {
+	display: none;
+}
+.rating:not(:checked) > label {
+	width: 22px;
+	float: right;
+	padding: 0;
+	cursor: pointer;
+	font-size: 22px;
+	line-height: 22px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating:not(:checked) > label:before {
+	content: '★';
+}
+.rating > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate > label:active {
+	position: relative;
+}
+.table-left{
+	text-align: left;
+	}
+	.hr{
+	border-color: red;
+	width:240px;
+	margin-left:1000px;
+	margin-top:290px;
+	}
+	.td-table{
+	width:300px;
+	padding: 5px;
+	text-align:center;
+	}
         </style>
     </head>
     <body>
@@ -136,29 +186,29 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block" >
+							<div class="line_block" >
 								<div style="padding-left:20px;">
 									<a href="#">Red</a>
-									<table>
-										<tr  align="left"><td style="padding-top:10px;">Tuscan Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">South African Pinotage</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Italian Amarone</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
+										<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
+										<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
+										<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
 									<a href="#">White</a>
-									<table>
-										<tr align="left"><td style="padding-top:10px;">German Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Northern Italy White</td></tr>
-										<tr align="left"><td style="padding-top:10px;">German Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">German Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
+										<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
 								<!--Sparkling Rosé Port Dessert-->
 								<a href="#">Sparkling</a>
@@ -174,36 +224,36 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Montepulciano</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Chardonnay</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pinot Noir</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Malbec</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
+										<tr><td style="padding-top:10px;">Montepulciano</td></tr>
+										<tr><td style="padding-top:10px;">Chardonnay</td></tr>
+										<tr><td style="padding-top:10px;">Pinot Noir</td></tr>
+										<tr><td style="padding-top:10px;">Malbec</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Zinfandel</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Nebbiolo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Sangiovese</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
+										<tr><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
+										<tr><td style="padding-top:10px;">Zinfandel</td></tr>
+										<tr><td style="padding-top:10px;">Nebbiolo</td></tr>
+										<tr><td style="padding-top:10px;">Sangiovese</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Pinot Grigio</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Tempranillo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Primitivo</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Pinot Grigio</td></tr>
+										<tr><td style="padding-top:10px;">Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">Tempranillo</td></tr>
+										<tr><td style="padding-top:10px;">Primitivo</td></tr>
 									</table>
 								</div>
 							</div>
@@ -214,40 +264,40 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Beef</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lamb</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Veal</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pork</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Game (deer, venison)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Poultry</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mushrooms</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Beef</td></tr>
+										<tr><td style="padding-top:10px;">Lamb</td></tr>
+										<tr><td style="padding-top:10px;">Veal</td></tr>
+										<tr><td style="padding-top:10px;">Pork</td></tr>
+										<tr><td style="padding-top:10px;">Game (deer, venison)</td></tr>
+										<tr><td style="padding-top:10px;">Poultry</td></tr>
+										<tr><td style="padding-top:10px;">Mushrooms</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cured meat</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Goat Cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mature and hard cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mild and soft cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pasta</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spicy food</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Cured meat</td></tr>
+										<tr><td style="padding-top:10px;">Goat Cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mature and hard cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mild and soft cheese</td></tr>
+										<tr><td style="padding-top:10px;">Pasta</td></tr>
+										<tr><td style="padding-top:10px;">Spicy food</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Aperitif</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Appetizers and snacks</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lean fish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shellfish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Vegetarian</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Aperitif</td></tr>
+										<tr><td style="padding-top:10px;">Appetizers and snacks</td></tr>
+										<tr><td style="padding-top:10px;">Lean fish</td></tr>
+										<tr><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
+										<tr><td style="padding-top:10px;">Shellfish</td></tr>
+										<tr><td style="padding-top:10px;">Vegetarian</td></tr>
 									</table>
 								</div>
 							</div>
@@ -264,10 +314,43 @@
 					<p style="position:absolute; top:120px; left:300px;">La Vicalanda</p>
 					<p style="position:absolute; top:160px; left:300px;">Reserva</p>
 					<p style="position:absolute; top:200px; left:300px;">Red wine from Rioja · Spain</p>
-			
+					
+					<table style="position:absolute; top:280px; left:300px;">
+						<tr>
+							<th>
+								<p>4</p>
+							</th>
+							<th>
+								<div class="rating" >
+									<input type="radio" id="star-5"  value="5">
+									<label for="star-5" title="Оценка «5»"></label>	
+									<input type="radio" id="star-4"  value="4">
+									<label for="star-4" title="Оценка «4»"></label>    
+									<input type="radio" id="star-3"  value="3">
+									<label for="star-3" title="Оценка «3»"></label>  
+									<input type="radio" id="star-2"  value="2">
+									<label for="star-2" title="Оценка «2»"></label>    
+									<input type="radio" id="star-1"  value="1">
+									<label for="star-1" title="Оценка «1»"></label>
+								</div>
+							</th>
+						</tr>
+					</table>
+					<table style="position:absolute; top:420px; left:300px;border-spacing: 7px;">
+						<tr>
+							<th style="background-color:#fadbc8;">
+								<p>Featured in Vivino's 2020 Wine Style Awards: Portuguese Vinho Verde White</p>
+							</th>
+						</tr>
+						<tr>
+							<th style="background-color:#fadbc8;">
+								<p>Ranks #1 in Best wines under 35p. right now</p>
+							</th>
+						</tr>
+					</table>
 					<p class="txt" style="position:absolute; top:200px; left:1000px;">Price: <br>€14.50<br><br><br>Better value? Available<br> prices for a 4 Spanish Rioja Red<br> are starting at around €10.12</p>
-					<hr size=3px width=200px style="margin-left:1000px;margin-top:290px;"; color="red">
-					</tr></th>
+					<hr class="hr" >
+					<br>
 					</table>
 				</div>
 				
@@ -275,12 +358,12 @@
 				<div style="padding-top:80px;padding-left:60px;">
 					<h2>Facts about the wine</h2>
 					<table frame="hsides" rules="rows">
-					<tr><td width="300" style="padding: 5px;" align="center">Winery</td><td width="600">	Podere San Cristoforo</td></tr>
-					<tr><td width="300" style="padding: 5px;" align="center">Grapes</td><td width="600">Sangiovese</td></tr>
-					<tr><td width="300" style="padding: 5px;" align="center">Region</td><td width="600">Italy / Toscana / Maremma Toscana</td></tr>
-					<tr><td width="300" style="padding: 5px;" align="center">Wine style</td width="600"><td>Tuscan Red</td></tr>
-					<tr><td width="300" style="padding: 5px;" align="center">Alcohol content</td><td width="600">13%</td></tr>
-					<tr><td width="300" style="padding: 5px;" align="center">Allergens</td><td width="600">Contains sulfites</td></tr>
+					<tr><td class="td-table">Winery</td><td style="width:600px;">	Podere San Cristoforo</td></tr>
+					<tr><td class="td-table">Grapes</td><td style="width:600px;">Sangiovese</td></tr>
+					<tr><td class="td-table">Region</td><td style="width:600px;">Italy / Toscana / Maremma Toscana</td></tr>
+					<tr><td class="td-table">Wine style</td><td style="width:600px;">Tuscan Red</td></tr>
+					<tr><td class="td-table">Alcohol content</td><td style="width:600px;">13%</td></tr>
+					<tr><td class="td-table">Allergens</td><td style="width:600px;">Contains sulfites</td></tr>
 					</table>
 					</div>
 				</div>
@@ -288,11 +371,25 @@
 			<div  style="background-color:#fcf9f5; padding-top:80px;padding-left:60px;height:650px;width:auto;">
 			<table  >
 			<!--<img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg">-->
-			<tr><td  style="padding: 25px;" rowspan="2"><h2>Food that goes well with this wine</h2><br>Our wine experts think this<br> Portuguese Vinho Verde White<br> wine would be a match made in <br>heaven with these dishes.<br> Bon appétit! <br><br>Are you cooking something else? <br>Search for wines by food pairings</td>
-			<td style="padding: 35px;" rowspan="2"><img src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" height = 300px width =85px></td>
-			<td style="padding-left: 130px;padding-right:40px;" ><a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" height = 160px width =140px><p style="padding-top:15px;padding-left:35px;">Shellfish</p></a></td>
-			<td style="padding: 35px;padding-right:40px;" ><a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" height = 160px width =140px><p style="padding-top:15px;padding-left:35px;">Vegetarian</p></a></td>
-			<td style="padding: 35px;padding-right:40px;" ><a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" height = 160px width =140px><p style="padding-top:15px;padding-left:5px;">Appetizers and snacks</p></a></td></tr>
+			<tr>
+				<td  style="padding: 25px;" >
+					<h2>Food that goes well with this wine</h2><br>Our wine experts think this<br> Portuguese Vinho Verde White<br> wine would be a match made in <br>heaven with these dishes.<br> Bon appétit! <br><br>Are you cooking something else? <br>Search for wines by food pairings
+				</td>
+				<td style="padding: 35px;" >
+					<img src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" style="height:300px; width:85px;" alt="">
+					</td>
+				<td style="padding-left: 130px;padding-right:40px;" >
+					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<p style="padding-top:15px;padding-left:35px;">Shellfish</p></a>
+				</td>
+				<td style="padding: 35px;padding-right:40px;" >
+					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<p style="padding-top:15px;padding-left:35px;">Vegetarian</p></a>
+				</td>
+				<td style="padding: 35px;padding-right:40px;" >
+					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<p style="padding-top:15px;padding-left:5px;">Appetizers and snacks</p></a>
+				</td>
 			</tr>
 			</table>
 			</div>
@@ -300,12 +397,25 @@
 			<div class="table3" style="">
 			<!--<div class="table3">-->
 			<div style="padding-left:120px;padding-top:50px;" >
-			<table style="background-color:white; border-radius: 5px; " width=400px height=550px>
-				<tr><td height=20px style="padding-left:10px"><h2>Wine style</h2><h1>Portuguese Vinho Verde White</h1><h3>Portugal</h3></tr></td>
-				<tr><td style="padding-left:10px" >Vinho Verde is a widely consumed white wine from Northern Portugal. The wine tends to be made from local grapes such as Alvarinho (Albarino), Loureiro, Arinto, and Azal.
-Vinho Verde is a light, refreshing wine with lots of floral and green fruit notes. The wine often has a slight carbonation to it, though not enough that it could be referred to as a sparkling wine.
-A Vinho Verde region was estab...</td></tr>
-<tr><td style="padding-left:10px">Read more</tr></td>
+			<table style="background-color:white; border-radius: 5px; width:400px; height:550px;">
+				<tr>
+					<td style="padding-left:10px;height:20px;">
+						<h2>Wine style</h2>
+						<h1>Portuguese Vinho Verde White</h1>
+						<h3>Portugal</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left:10px" >Vinho Verde is a widely consumed white wine from Northern Portugal. The wine tends to be made from local grapes such as Alvarinho (Albarino), Loureiro, Arinto, and Azal.
+						Vinho Verde is a light, refreshing wine with lots of floral and green fruit notes. The wine often has a slight carbonation to it, though not enough that it could be referred to as a sparkling wine.
+						A Vinho Verde region was estab...
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left:10px">
+						<a href="https://www.vivino.com/wine-styles/new-zealand-sauvignon-blanc" target="_blank">Read more</a>
+					</td>
+				</tr>
 			</table>
 			</div>
 			</div>

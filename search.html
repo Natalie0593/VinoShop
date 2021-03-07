@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
@@ -39,12 +39,18 @@
 			 height:650px;
 			 background-color:#f2e6e8;
 			}
-			#line_block {  
+			
+			.line_block {  
         float:left; 
         margin: 0 15px 15px 0; 
         text-align:center;
         padding: 10px;
         }
+		.line_block_header {  
+			float:left; 
+			padding-top:20px;
+			text-align:center;
+			}
 		
        			.navbar {
     overflow: hidden;
@@ -110,6 +116,47 @@
 			padding-top:20px;
 			text-align:center;
 			}
+			.rating {
+	}
+.rating:not(:checked) > input {
+	display: none;
+}
+.rating:not(:checked) > label {
+	width: 21px;
+	float: right;
+	padding: 0;
+	cursor: pointer;
+	font-size: 28px;
+	line-height: 28px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating:not(:checked) > label:before {
+	content: '★';
+}
+.rating > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate > label:active {
+	position: relative;
+	}
+	.table-left{
+	text-align: left;
+	}
+	
         </style>
     </head>
     <body style="overflow-x:  hidden;">
@@ -121,29 +168,29 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block2" >
+							<div class="line_block_header" >
 								<div style="padding-left:20px;">
 									<a href="#">Red</a>
-									<table>
-										<tr  align="left"><td style="padding-top:10px;">Tuscan Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">South African Pinotage</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Italian Amarone</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
+										<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
+										<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
+										<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
 									<a href="#">White</a>
-									<table>
-										<tr align="left"><td style="padding-top:10px;">German Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Northern Italy White</td></tr>
-										<tr align="left"><td style="padding-top:10px;">German Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">German Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
+										<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
 								<!--Sparkling Rosé Port Dessert-->
 								<a href="#">Sparkling</a>
@@ -159,36 +206,36 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Montepulciano</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Chardonnay</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pinot Noir</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Malbec</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
+										<tr><td style="padding-top:10px;">Montepulciano</td></tr>
+										<tr><td style="padding-top:10px;">Chardonnay</td></tr>
+										<tr><td style="padding-top:10px;">Pinot Noir</td></tr>
+										<tr><td style="padding-top:10px;">Malbec</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Zinfandel</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Nebbiolo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Sangiovese</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
+										<tr><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
+										<tr><td style="padding-top:10px;">Zinfandel</td></tr>
+										<tr><td style="padding-top:10px;">Nebbiolo</td></tr>
+										<tr><td style="padding-top:10px;">Sangiovese</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Pinot Grigio</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Tempranillo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Primitivo</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Pinot Grigio</td></tr>
+										<tr><td style="padding-top:10px;">Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">Tempranillo</td></tr>
+										<tr><td style="padding-top:10px;">Primitivo</td></tr>
 									</table>
 								</div>
 							</div>
@@ -199,40 +246,40 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Beef</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lamb</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Veal</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pork</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Game (deer, venison)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Poultry</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mushrooms</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Beef</td></tr>
+										<tr><td style="padding-top:10px;">Lamb</td></tr>
+										<tr><td style="padding-top:10px;">Veal</td></tr>
+										<tr><td style="padding-top:10px;">Pork</td></tr>
+										<tr><td style="padding-top:10px;">Game (deer, venison)</td></tr>
+										<tr><td style="padding-top:10px;">Poultry</td></tr>
+										<tr><td style="padding-top:10px;">Mushrooms</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cured meat</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Goat Cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mature and hard cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mild and soft cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pasta</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spicy food</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Cured meat</td></tr>
+										<tr><td style="padding-top:10px;">Goat Cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mature and hard cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mild and soft cheese</td></tr>
+										<tr><td style="padding-top:10px;">Pasta</td></tr>
+										<tr><td style="padding-top:10px;">Spicy food</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block2">
+							<div class="line_block_header">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Aperitif</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Appetizers and snacks</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lean fish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shellfish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Vegetarian</td></tr>
+									<table class="table-left">
+										<tr><td style="padding-top:10px;">Aperitif</td></tr>
+										<tr><td style="padding-top:10px;">Appetizers and snacks</td></tr>
+										<tr><td style="padding-top:10px;">Lean fish</td></tr>
+										<tr><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
+										<tr><td style="padding-top:10px;">Shellfish</td></tr>
+										<tr><td style="padding-top:10px;">Vegetarian</td></tr>
 									</table>
 								</div>
 							</div>
@@ -244,7 +291,7 @@
 		
 		<h2 style="padding-top:100px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
 		<div>
-		<div id="line_block">
+		<div class="line_block">
 			<div style="padding-left:20px;">
 			<div  style="width:500px;">
 						<div>
@@ -336,10 +383,10 @@
 							<table style=" width:500px;" >
 								<caption><h3>Countries</h3></caption>
 									<tr>
-										<td>Argentina</th>
-										<td> Australia</th>
-										<td>Austria</th>
-										<td>Chile</th>
+										<td>Argentina</td>
+										<td> Australia</td>
+										<td>Austria</td>
+										<td>Chile</td>
 									</tr>
 									<tr>
 										<td>France</td>
@@ -359,21 +406,21 @@
 						</div>
 			</div>
 		</div> 
-		<div id="line_block">
+		<div class="line_block">
 					<div style="padding-left:30px;">
 						<div >
 							<table style="padding-left:30px; width:800px;border-spacing: 12px ; ">
-								<tr style="background-color:#f7c6d0;">
+								<tr style="background-color:#fff5f7;">
 								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2012&price_id=23403923 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/CbjCX1G9QOawd5UDGNy7sg_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px;" alt="" src="https://images.vivino.com/thumbs/CbjCX1G9QOawd5UDGNy7sg_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -381,28 +428,49 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>La Rioja Alta</h2>
-											<h3>Viña Ardanza Reserva 2012</h3>
-											<h4>Red wine from Rioja Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>La Rioja Alta</p>
+											<p>Viña Ardanza Reserva 2012</p>
+											<p>Red wine from Rioja Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>3</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star1-5"  value="5">
+														<label title="Оценка «5»"></label>	
+														<input type="radio" id="star1-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star1-3"  value="3">
+														<label  title="Оценка «3»"></label>  
+														<input type="radio" id="star1-2"  value="2">
+														<label  title="Оценка «2»"></label>    
+														<input type="radio" id="star1-1"  value="1">
+														<label  title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
 						
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/podere-san-cristoforo-amaranto-sangiovese/w/1291326?year=2018&price_id=22357821 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/-Gxa1jPjTm64ld15fKZh6g_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/-Gxa1jPjTm64ld15fKZh6g_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -410,27 +478,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Podere San Cristoforo</h2>
-											<h3>Amaranto Sangiovese 2018</h3>
-											<h4>Red wine from Maremma Toscana Italy</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Podere San Cristoforo</p>
+											<p>Amaranto Sangiovese 2018</p>
+											<p>Red wine from Maremma Toscana Italy</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>4</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star2-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star2-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star2-3"  value="3">
+														<label  title="Оценка «3»"></label>  
+														<input type="radio" id="star2-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star2-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/bodegas-arzuaga-navarro-sl-ribera-del-duero-crianza/w/7932?year=2017&price_id=22357614 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/u_K6vdDZTp2yCKPyw4JO5g_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/u_K6vdDZTp2yCKPyw4JO5g_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -438,27 +527,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Arzuaga</h2>
-											<h3>Ribera del Duero Crianza 2017</h3>
-											<h4>Red wine from Ribera del Duero Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Arzuaga</p>
+											<p>Ribera del Duero Crianza 2017</p>
+											<p>Red wine from Ribera del Duero Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>2</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star3-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star3-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star3-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star3-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star3-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/mar-de-frades-rias-baixas-albarino/w/1143504?year=2019&price_id=22357932 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/xmoeIltaTqqdHviQ2MM8rw_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/xmoeIltaTqqdHviQ2MM8rw_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -466,27 +576,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Mar de Frades</h2>
-											<h3>Rías Baixas Albariño 2019</h3>
-											<h4>White wine from Rías Baixas Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Mar de Frades</p>
+											<p>Rías Baixas Albariño 2019</p>
+											<p>White wine from Rías Baixas Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>5</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star4-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star4-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star4-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star4-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star4-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/la-rioja-alta-vina-alberdi-reserva/w/7976?year=2015&price_id=22355672-->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/yraqVgZ6RNODE-_iyaFZ4Q_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/yraqVgZ6RNODE-_iyaFZ4Q_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -494,27 +625,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>La Rioja Alta</h2>
-											<h3>Viña Alberdi Reserva 2015</h3>
-											<h4>Red wine from Rioja Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>La Rioja Alta</p>
+											<p>Viña Alberdi Reserva 2015</p>
+											<p>Red wine from Rioja Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>2</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star5-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star5-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star5-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star5-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star5-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/pago-de-los-capellanes-crianza-tinto/w/16226?year=2017&price_id=22356154-->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/PtA1A516RK6KClme7eBSCQ_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/PtA1A516RK6KClme7eBSCQ_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -522,27 +674,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Pago de Los Capellanes</h2>
-											<h3>Crianza Tinto 2017</h3>
-											<h4>Red wine from Ribera del Duero Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Pago de Los Capellanes</p>
+											<p>Crianza Tinto 2017</p>
+											<p>Red wine from Ribera del Duero Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>5</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star6-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star6-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star6-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star6-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star6-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/es-de-muller-legitim-crianza/w/1210435?year=2017&price_id=22357413 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/rTKVzbP1TFWaGLuWFR6RBg_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/rTKVzbP1TFWaGLuWFR6RBg_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -550,27 +723,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>De Muller</h2>
-											<h3>Legítim Crianza 2017</h3>
-											<h4>Red wine from Priorat Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>De Muller</p>
+											<p>Legítim Crianza 2017</p>
+											<p>Red wine from Priorat Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>1</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star7-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star7-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star7-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star7-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star7-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/claudie-jobard-rully-montagne-la-folie/w/1219862?year=2018&price_id=23917702 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/W1oARjnZS6O1DkRS_k8RDQ_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/W1oARjnZS6O1DkRS_k8RDQ_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -578,27 +772,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Domaine Claudie Jobard</h2>
-											<h3>Rully Montagne La Folie 2018/h3>
-											<h4>White wine from Rully France</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Domaine Claudie Jobard</p>
+											<p>Rully Montagne La Folie 2018</p>
+											<p>White wine from Rully France</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>2</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star8-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star8-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star8-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star8-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star8-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/jorge-ordonez-and-co-no-2-victoria/w/1285845?year=2017&price_id=22356826 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/s70_zYsITfSv1rWz8OjDfA_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/s70_zYsITfSv1rWz8OjDfA_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -606,27 +821,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Jorge Ordóñez</h2>
-											<h3>No. 2 Victoria 2017</h3>
-											<h4>Dessert wine from Málaga Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Jorge Ordóñez</p>
+											<p>No. 2 Victoria 2017</p>
+											<p>Dessert wine from Málaga Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>4</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star9-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star9-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star9-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star9-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star9-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/compania-de-vinos-trico-nicolas-albarino/w/1634161?year=2015&price_id=22356711 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/-gAClUrGTJWW5jqOFhV9xA_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/-gAClUrGTJWW5jqOFhV9xA_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -634,27 +870,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Compañía de Vinos Tricó</h2>
-											<h3>Nicolás Albariño 2015</h3>
-											<h4>White wine from Rías Baixas Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Compañía de Vinos Tricó</p>
+											<p>Nicolás Albariño 2015</p>
+											<p>White wine from Rías Baixas Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>5</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star10-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star10-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="sta10-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star10-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star10-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/venus-la-universal-dido-la-solucio-rosa/w/5479963?year=2018&price_id=22357252 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/eA4gb2wYTgqTHTjVpyQaEQ_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/eA4gb2wYTgqTHTjVpyQaEQ_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -662,27 +919,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>Venus la Universal</h2>
-											<h3>Dido La Solució Rosa 2018</h3>
-											<h4>Rosé wine from Montsant Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>Venus la Universal</p>
+											<p>Dido La Solució Rosa 2018</p>
+											<p>Rosé wine from Montsant Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>5</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star11-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star11-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star11-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star11-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star11-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/la-vicalanda-reserva/w/1126221?year=2014&price_id=22356601-->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/dxOFUGx_TimjeOmrMPZYBA_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/dxOFUGx_TimjeOmrMPZYBA_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -690,27 +968,48 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>La Vicalanda</h2>
-											<h3>Reserva 2014</h3>
-											<h4>Red wine from Rioja Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>La Vicalanda</p>
+											<p>Reserva 2014</p>
+											<p>Red wine from Rioja Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>3</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star12-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star12-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star12-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star12-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star12-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
 									</th>
 								</tr>
-								<tr style="background-color:#f7c6d0;padding-top:20px;">
+								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2010&price_id=23538257 -->
 									<th>
-										<div id="line_block">
+										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#fff0f6;">
+												<table style="background-color:#ebc7df;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " align="centre" src="https://images.vivino.com/thumbs/2UwsjWzESdGurxw2w54SHA_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/2UwsjWzESdGurxw2w54SHA_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -718,11 +1017,32 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;" align="left">
-											<h2>La Rioja Alta</h2>
-											<h3>Viña Ardanza Reserva 2010</h3>
-											<h4>Red wine from Rioja Spain</h4>
+										<div style="background-color:#ffe0ed;text-align: left;" >
+											<p>La Rioja Alta</p>
+											<p>Viña Ardanza Reserva 2010</p>
+											<p>Red wine from Rioja Spain</p>
 										</div>
+										<table style="padding-left:10px;">
+											<tr>
+												<th>
+													<p>4</p>
+												</th>
+												<th>
+													<div class="rating">
+														<input type="radio" id="star13-5"  value="5">
+														<label  title="Оценка «5»"></label>	
+														<input type="radio" id="star13-4"  value="4">
+														<label  title="Оценка «4»"></label>    
+														<input type="radio" id="star13-3"  value="3">
+														<label title="Оценка «3»"></label>  
+														<input type="radio" id="star13-2"  value="2">
+														<label title="Оценка «2»"></label>    
+														<input type="radio" id="star13-1"  value="1">
+														<label title="Оценка «1»"></label>
+													</div>
+												</th>
+											</tr>
+										</table>
 										<div style="padding-top:70px;">
 										<button>View shops</button>
 										</div>
@@ -731,7 +1051,7 @@
 							</table>
 						</div>
 					</div>
-		</div> 
+		    </div> 
 		</div>
 	</body>
 </html>

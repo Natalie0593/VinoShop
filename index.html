@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
@@ -14,30 +14,10 @@
 				background-color: #ad0028;
 			}
 
-			.grid-container {
-                display: grid;
-				height: 50px;
-                grid-template-columns: 10em 10em 10em;
-				grid-template-rows: 2em;
-            }
-            .grid-item {
-                text-align:center;
-                font-size: 0.9em;
-                padding: 0.7em;
-                color: white;
-            }
-			 
-			.grid2{
-				display: grid;
-				height: 200px;
-                grid-template-columns: 70em;
-				grid-template-rows: 70em;
-				background-color: #675BA7;
-			}
 			* {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {horizontal-align: middle;}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -48,13 +28,16 @@ img {horizontal-align: middle;}
 }
 
 .container{
- max-width: 190px;
+width: 210px;
+height:320px;
 display: inline-block;
+background-color:#e9edf5;
+padding-bottom:5px;
 }
 
 .container-img{
-max-width: 190px;
-height:350px;
+width: 70px;
+height:230px;
 }
 
 .container-txt{
@@ -176,7 +159,6 @@ height:50px;
 			}
 
 			.navbar a:hover, .dropdown:hover .dropbtn {
-			background-color: red;
 			}
 			.dropdown-content {
 				display: none;
@@ -203,11 +185,52 @@ height:50px;
 			.dropdown:hover .dropdown-content {
 				display: block;
 			}
-			#line_block {  
+			.line_block {  
 			float:left; 
 			padding-top:20px;
 			text-align:center;
 			}
+			.rating {
+	}
+.rating:not(:checked) > input {
+	display: none;
+}
+.rating:not(:checked) > label {
+	width: 21px;
+	float: right;
+	padding: 0;
+	cursor: pointer;
+	font-size: 28px;
+	line-height: 28px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating:not(:checked) > label:before {
+	content: '★';
+}
+.rating > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate > label:active {
+	position: relative;
+	}
+	
+	.table{
+	text-align: left;
+	}
         </style>
     </head>
     <body>
@@ -219,29 +242,29 @@ height:50px;
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block" >
+							<div class="line_block" >
 								<div style="padding-left:20px;">
 									<a href="#">Red</a>
-									<table>
-										<tr  align="left"><td style="padding-top:10px;">Tuscan Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
-										<tr align="left"><td style="padding-top:10px;">South African Pinotage</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Italian Amarone</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
+										<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
+										<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
+										<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
 									<a href="#">White</a>
-									<table>
-										<tr align="left"><td style="padding-top:10px;">German Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Northern Italy White</td></tr>
-										<tr align="left"><td style="padding-top:10px;">German Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">German Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
+										<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
 								<!--Sparkling Rosé Port Dessert-->
 								<a href="#">Sparkling</a>
@@ -257,36 +280,36 @@ height:50px;
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Montepulciano</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Chardonnay</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pinot Noir</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Malbec</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
+										<tr><td style="padding-top:10px;">Montepulciano</td></tr>
+										<tr><td style="padding-top:10px;">Chardonnay</td></tr>
+										<tr><td style="padding-top:10px;">Pinot Noir</td></tr>
+										<tr><td style="padding-top:10px;">Malbec</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Zinfandel</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Nebbiolo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Sangiovese</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
+										<tr><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
+										<tr><td style="padding-top:10px;">Zinfandel</td></tr>
+										<tr><td style="padding-top:10px;">Nebbiolo</td></tr>
+										<tr><td style="padding-top:10px;">Sangiovese</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Pinot Grigio</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Riesling</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Grauburgunder</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Tempranillo</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Primitivo</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Pinot Grigio</td></tr>
+										<tr><td style="padding-top:10px;">Riesling</td></tr>
+										<tr><td style="padding-top:10px;">Grauburgunder</td></tr>
+										<tr><td style="padding-top:10px;">Tempranillo</td></tr>
+										<tr><td style="padding-top:10px;">Primitivo</td></tr>
 									</table>
 								</div>
 							</div>
@@ -297,40 +320,40 @@ height:50px;
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Beef</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lamb</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Veal</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pork</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Game (deer, venison)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Poultry</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mushrooms</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Beef</td></tr>
+										<tr><td style="padding-top:10px;">Lamb</td></tr>
+										<tr><td style="padding-top:10px;">Veal</td></tr>
+										<tr><td style="padding-top:10px;">Pork</td></tr>
+										<tr><td style="padding-top:10px;">Game (deer, venison)</td></tr>
+										<tr><td style="padding-top:10px;">Poultry</td></tr>
+										<tr><td style="padding-top:10px;">Mushrooms</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Cured meat</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Goat Cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mature and hard cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Mild and soft cheese</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Pasta</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Spicy food</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Cured meat</td></tr>
+										<tr><td style="padding-top:10px;">Goat Cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mature and hard cheese</td></tr>
+										<tr><td style="padding-top:10px;">Mild and soft cheese</td></tr>
+										<tr><td style="padding-top:10px;">Pasta</td></tr>
+										<tr><td style="padding-top:10px;">Spicy food</td></tr>
 									</table>
 								</div>
 							</div>
-							<div id="line_block">
+							<div class="line_block">
 								<div style="padding-left:20px;">
-									<table>
-										<tr align="left"><td style="padding-top:10px;">Aperitif</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Appetizers and snacks</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Lean fish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Shellfish</td></tr>
-										<tr align="left"><td style="padding-top:10px;">Vegetarian</td></tr>
+									<table class="table">
+										<tr><td style="padding-top:10px;">Aperitif</td></tr>
+										<tr><td style="padding-top:10px;">Appetizers and snacks</td></tr>
+										<tr><td style="padding-top:10px;">Lean fish</td></tr>
+										<tr><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
+										<tr><td style="padding-top:10px;">Shellfish</td></tr>
+										<tr><td style="padding-top:10px;">Vegetarian</td></tr>
 									</table>
 								</div>
 							</div>
@@ -348,73 +371,201 @@ height:50px;
 		<br><br>
 		<div class="slideshow-container">
 
-			<div class="mySlides fade">
-
-				<div class="container" style="margin-left:30px">
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" ></a>
-				<div class="container-txt">Fonte Pequena<br>Maré Alta 2017</div></div>
+			<div class="mySlides fade" style="padding-top:35px;">
+				<div class="container" style="margin-left:30px;" >
+					<div class="line_block">
+						<table>
+							<tr>
+								<th>
+									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" alt="" ></a>
+								</th>
+								
+								<th>
+									<table style="padding-left:10px;">
+										<tr>
+											<th>
+												<p>3</p>
+												<div class="rating">
+													<input type="radio" id="star1-5"  value="5">
+													<label for="star1-5" title="Оценка «5»"></label>	
+													<input type="radio" id="star1-4"  value="4">
+													<label for="star1-4" title="Оценка «4»"></label>    
+													<input type="radio" id="star1-3"  value="3">
+													<label for="star1-3" title="Оценка «3»"></label>  
+													<input type="radio" id="star1-2"  value="2">
+													<label for="star1-2" title="Оценка «2»"></label>    
+													<input type="radio" id="star1-1"  value="1">
+													<label for="star1-1" title="Оценка «1»"></label>
+												</div>
+											</th>
+										</tr>
+									</table>
+								</th>
+							</tr>
+						</table>
+						<div class="container-txt" style="padding-top:5px;">Fonte Pequena<br>Maré Alta 2017</div>
+					
+					</div>
+				</div>
 				
-				<div class="container" style="margin-left:45px"> 
-				<a href="vino_2.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/7z-dy1wwRmKdGNzBcCEEwQ_pb_x600.png" ></a>
-				<div class="container-txt">Hans Greyl<br>Sauvignon Blanc 2019</div></div>
+				<div class="container" style="margin-left:30px;" >
+					<div class="line_block">
+						<table>
+							<tr>
+								<th>
+									<a href="vino_2.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/7z-dy1wwRmKdGNzBcCEEwQ_pb_x600.png" alt="" ></a>
+								</th>
+								
+								<th>
+									<table style="padding-left:10px;">
+										<tr>
+											<th>
+												<p>2</p>
+												<div class="rating">
+													<input type="radio" id="star2-5"  value="5">
+													<label for="star2-5" title="Оценка «5»"></label>	
+													<input type="radio" id="star2-4"  value="4">
+													<label for="star2-4" title="Оценка «4»"></label>    
+													<input type="radio" id="star2-3"  value="3">
+													<label for="star2-3" title="Оценка «3»"></label>  
+													<input type="radio" id="star2-2"  value="2">
+													<label for="star2-2" title="Оценка «2»"></label>    
+													<input type="radio" id="star2-1"  value="1">
+													<label for="star2-1" title="Оценка «1»"></label>
+												</div>
+											</th>
+										</tr>
+									</table>
+								</th>
+							</tr>
+						</table>
+						<div class="container-txt" style="padding-top:5px;">Hans Greyl<br>Sauvignon Blanc 2019</div>
+					
+					</div>
+				</div>
 				
-				<div class="container" style="margin-left:30px"> 
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/d95_Rl_UReeoMmvPpx5axA_pb_x600.png" ></a>
-				<div class="container-txt">Familia Torres<br>San Parellada 2019</div></div>
+				<div class="container" style="margin-left:30px;" >
+					<div class="line_block">
+						<table>
+							<tr>
+								<th>
+									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/d95_Rl_UReeoMmvPpx5axA_pb_x600.png" alt="" ></a>
+								</th>
+								
+								<th>
+									<table style="padding-left:10px;">
+										<tr>
+											<th>
+												<p>4</p>
+												<div class="rating">
+													<input type="radio" id="star3-5"  value="5">
+													<label for="star3-5" title="Оценка «5»"></label>	
+													<input type="radio" id="star3-4"  value="4">
+													<label for="star3-4" title="Оценка «4»"></label>    
+													<input type="radio" id="star3-3"  value="3">
+													<label for="star3-3" title="Оценка «3»"></label>  
+													<input type="radio" id="star3-2"  value="2">
+													<label for="star3-2" title="Оценка «2»"></label>    
+													<input type="radio" id="star3-1"  value="1">
+													<label for="star3-1" title="Оценка «1»"></label>
+												</div>
+											</th>
+										</tr>
+									</table>
+								</th>
+							</tr>
+						</table>
+						<div class="container-txt" style="padding-top:5px;">Familia Torres<br>San Parellada 2019</div>
+					
+					</div>
+				</div>
+				<div class="container" style="margin-left:30px;" >
+					<div class="line_block">
+						<table>
+							<tr>
+								<th>
+									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/3Z1TuDHgQ_GnqTAP1-DJzg_pb_x600.png" alt=""></a>
+								</th>
+								
+								<th>
+									<table style="padding-left:10px;">
+										<tr>
+											<th>
+												<p>5</p>
+												<div class="rating">
+													<input type="radio" id="star4-5"  value="5">
+													<label for="star4-5" title="Оценка «5»"></label>	
+													<input type="radio" id="star4-4"  value="4">
+													<label for="star4-4" title="Оценка «4»"></label>    
+													<input type="radio" id="star4-3"  value="3">
+													<label for="star4-3" title="Оценка «3»"></label>  
+													<input type="radio" id="star4-2"  value="2">
+													<label for="star4-2" title="Оценка «2»"></label>    
+													<input type="radio" id="star4-1"  value="1">
+													<label for="star4-1" title="Оценка «1»"></label>
+												</div>
+											</th>
+										</tr>
+									</table>
+								</th>
+							</tr>
+						</table>
+						<div class="container-txt" style="padding-top:5px;">770 Miles<br>Zinfandel 2018</div>
+					
+					</div>
+				</div>
 				
-				<div class="container" style="margin-left:30px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/3Z1TuDHgQ_GnqTAP1-DJzg_pb_x600.png" ></a>
-				<div class="container-txt">770 Miles<br>Zinfandel 2018</div></div>
-				
+				<!--
 				<div class="container" style="margin-left:35px">  
 				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/Kj49DbFERe-C70iJemuqYQ_pb_x600.png" ></a>
 				<div class="container-txt">Luna Argenta<br>Negroamaro 2018</div></div>
-				
+				-->
 				
 			</div>
 
 			<div class="mySlides fade">
 				<div class="container">
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/Q85GabEBRMufAZEZ_nVA8Q_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/Q85GabEBRMufAZEZ_nVA8Q_pb_x600.png" alt=""></a>
 				<div class="container-txt">Mud House<br>Sauvignon Blanc 2018</div></div>
 				
 				<div class="container" style="margin-left:20px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/h2X6n5HVS1GrJjk6MPm0Wg_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/h2X6n5HVS1GrJjk6MPm0Wg_pb_x600.png" alt="" ></a>
 				<div class="container-txt">Mud House<br>Sauvignon Blanc 2018</div></div>
 				
 				<div class="container" style="margin-left:20px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/wIwOGBvOSi2LE6mK2K9afg_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/wIwOGBvOSi2LE6mK2K9afg_pb_x600.png" alt="" ></a>
 				<div class="container-txt">Hans Baer<br>Riesling Trocken 2019</div></div>
 				
 				<div class="container" style="margin-left:20px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/gLAVSoUxT4ibbf9Ht90Ebw_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/gLAVSoUxT4ibbf9Ht90Ebw_pb_x600.png" alt=""></a>
 				<div class="container-txt">Kia Ora<br>Sauvignon Blanc 2019</div></div>
-				
+				<!--
 				<div class="container" style="margin-left:20px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/kYRg8MbZRmOgjdgrfwUOVQ_pb_x600.png" ></a>
-				<div class="container-txt">Cielo e Terra<br>3 Passo Rosso 2018</div></div>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/kYRg8MbZRmOgjdgrfwUOVQ_pb_x600.png" alt=""></a>
+				<div class="container-txt">Cielo e Terra<br>3 Passo Rosso 2018</div></div>-->
 			</div>
 
 			<div class="mySlides fade">
 				<div class="container">
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/LboARW12QBuaAZtvxati2w_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/LboARW12QBuaAZtvxati2w_pb_x600.png" alt=""></a>
 				<div class="container-txt">Félix Solís<br>Southern Ocean 2019 </div></div>
 				
 				<div class="container" style="margin-left:20px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/7Xzfa-zUQ2G_udWGfQD6qw_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/7Xzfa-zUQ2G_udWGfQD6qw_pb_x600.png" alt="" ></a>
 				<div class="container-txt">Woodhaven<br>Zinfandel 2017</div></div>
 				
 				<div class="container" style="margin-left:50px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/p95-XVTqQ3qdQ56bGs3ALQ_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/p95-XVTqQ3qdQ56bGs3ALQ_pb_x600.png" alt=""></a>
 				<div class="container-txt">Brancott Estate<br>Sauvignon Blanc 2017</div></div>
 				
 				<div class="container" style="margin-left:30px">  
-				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/n_mIrdWlQ-utMRW0VlOAEQ_pb_x600.png" ></a>
+				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/n_mIrdWlQ-utMRW0VlOAEQ_pb_x600.png" alt=""></a>
 				<div class="container-txt">Familia Torres<br>San Valentín 2018</div></div>
 				
+				<!--
 				<div class="container" style="margin-left:30px">  
 				<a href="vino_1.html" target="_blank"><img class="container-img" src="https://images.vivino.com/thumbs/xyL8LvUMTJSy1Xb_bcqGLw_pb_x600.png" ></a>
-				<div class="container-txt">Familia Torres<br>Viña Esmeralda 2018</div></div>
+				<div class="container-txt">Familia Torres<br>Viña Esmeralda 2018</div></div>-->
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">❮</a>
