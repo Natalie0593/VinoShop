@@ -10,7 +10,7 @@
 				left: 50%;
 				margin-left: -50vw;
 				width: 100vw;
-				height: 80px;
+				height: 110px;
 				background-color: #ad0028;
 			}
 
@@ -187,7 +187,6 @@ height:50px;
 			}
 			.line_block {  
 			float:left; 
-			padding-top:20px;
 			text-align:center;
 			}
 			.rating {
@@ -231,28 +230,58 @@ height:50px;
 	.table{
 	text-align: left;
 	}
+	.link {
+   color: #fff;
+   border-radius: 3px;
+   text-decoration: none;
+   text-align:center;
+}
+
+
         </style>
     </head>
     <body>
-	<header class="header">
-				<a href="index.html" target="_blank"><p style="padding-left:50px;">Vivino</p></a>
-				<div class="navbar">
-					<div class="dropdown" style="padding-left:70px;">
-						<button class="dropbtn">Types of wines 
-							<i class="fa fa-caret-down"></i>
-						</button>
-						<div class="dropdown-content">
-							<div class="line_block" >
-								<div style="padding-left:20px;">
-									<a href="#">Red</a>
-									<table class="table">
-										<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
-										<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
-										<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
-										<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
-									</table>
-								</div>
-							</div>
+	<header class="header" style="background-color:#ad0028;">
+	
+	<table >
+		<tr>
+			<th style="padding-bottom:0px;">
+				<div class="line_block">
+					<table>
+						<tr>
+							<th>
+								<a href="index.html" target="_blank"><p style="padding-left:250px;">Vivino</p></a>
+							</th>
+							<th>
+								<a href="login.html" style="padding-left:1000px;" class="link" data-modal="delivery">Sing in</a>
+							</th>
+							<th>
+								<a href="register.html" style="padding-left:20px;" class="link" data-modal="delivery">Sing up</a>
+							</th>
+						</tr>
+					</table>
+				</div>
+			</th>
+		</tr>
+				<tr>
+					<th style="padding-top:0px;">
+						<div class="navbar" >
+							<div class="dropdown" style="padding-left:70px;">
+								<button class="dropbtn">Types of wines 
+									<i class="fa fa-caret-down"></i>
+								</button>
+								<div class="dropdown-content">
+									<div class="line_block" >
+										<div style="padding-left:20px;">
+											<a href="#">Red</a>
+											<table class="table">
+												<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
+												<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
+												<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
+												<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
+											</table>
+										</div>
+									</div>
 							<div class="line_block">
 								<div style="padding-left:20px;">
 									<a href="#">White</a>
@@ -360,7 +389,14 @@ height:50px;
 						</div>
 					</div> 
 				</div>
+			</th>
+		</tr>
+	</table>
 		
+		
+		<!----------------------------------------------------------------------->
+		
+		<!----------------------------------------------------------------------->
 		</header>
 	
 		<div >
@@ -579,6 +615,8 @@ height:50px;
 			<span class="dot" onclick="currentSlide(2)"></span> 
 			<span class="dot" onclick="currentSlide(3)"></span> 
 		</div>
+		
+		
 
 <script>
 var slideIndex = 1;
@@ -607,6 +645,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
 </script>
        
     </body>
