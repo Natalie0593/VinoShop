@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+		<!--<link rel="stylesheet" href="css/search.css" type="text/css"/>-->
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
-        <style>
-            .header{
+		<style>
+		.header{
 				position: absolute;
 				top: 0;
 				left: 50%;
@@ -53,39 +54,38 @@
 			}
 		
        			.navbar {
-    overflow: hidden;
-    background-color: #ad0028;
-    font-family: Arial, Helvetica, sans-serif;
-}
+				overflow: hidden;
+				background-color: #ad0028;
+				font-family: Arial, Helvetica, sans-serif;
+			}
 
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+			.navbar a {
+				float: left;
+				font-size: 16px;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
+			.dropdown {
+				float: left;
+				overflow: hidden;
+			}
 
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+			.dropdown .dropbtn {
+				font-size: 16px;    
+				border: none;
+				outline: none;
+				color: white;
+				padding: 14px 16px;
+				background-color: inherit;
+				font-family: inherit;
+				margin: 0;
+			}
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			}
 			.dropdown-content {
 				display: none;
 				position: absolute;
@@ -166,23 +166,89 @@
 			float:left; 
 			text-align:center;
 			}
-        </style>
-    </head>
-    <body style="overflow-x:  hidden;">
+			.name-cite{
+		 color: white;
+		 font-family: «Great Vibes», cursive;
+		 font-size: 25px;
+		 line-height: 20px;
+		 font-weight: normal;
+
+		 text-align: center;
+		 text-shadow: 0 1px 1px #fff;
+		 }
+		 input[type=text] {
+			width: 150px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 50px;
+			font-size: 16px;
+			outline: none;
+			border: none;
+			background-color: white;
+			background-image: url('img/search_ico.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 12px 20px 12px 40px;
+			transition: width 0.4s ease-in-out;
+		}
+
+		input[type=text]:focus {
+			width: 350px;
+		}
+		.image_btn{
+			background-image: url('img/vino.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.image_btn2{
+			background-image: url('img/grapes.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.image_btn3{
+			background-image: url('img/pairings.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.boxShadow8 {
+				width: 80%;
+				max-width: 500px;
+				margin: 2em auto;
+				padding: 0.5em;
+				box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+			}
+		</style>
+     </head>
+    <body style="overflow-x:  hidden;background-color:#f5f5f5;">
 		      
 	<header class="header" style="background-color:#ad0028;">
 	
-	<table >
+	<table width=100%; >
 		<tr>
 			<th style="padding-bottom:0px;">
 				<div class=".line_block-header">
 					<table>
 						<tr>
 							<th>
-								<a href="index.html" target="_blank"><p style="padding-left:250px;">Vivino</p></a>
+								<a href="index.html" style="text-decoration: none;" target="_blank"><p class="name-cite" style="padding-left:250px;">Vivino</p></a>
+							</th>
+							<th >
+								<form style="padding-left:10px;">
+									<input type="text" name="search" placeholder="Search..">
+								</form>
 							</th>
 							<th>
-								<a href="login.html" style="padding-left:1000px;" class="link" data-modal="delivery">Sing in</a>
+								<a href="login.html" style="padding-left:600px;" class="link" data-modal="delivery">Sing in</a>
 							</th>
 							<th>
 								<a href="register.html" style="padding-left:20px;" class="link" data-modal="delivery">Sing up</a>
@@ -196,9 +262,18 @@
 					<th style="padding-top:0px;">
 						<div class="navbar" >
 							<div class="dropdown" style="padding-left:70px;">
-								<button class="dropbtn">Types of wines 
-									<i class="fa fa-caret-down"></i>
-								</button>
+								<table>
+									<tr>
+										<th>
+											<img class="image_btn">
+										</th>
+										<th>
+											<button class="dropbtn "> Types of wines 
+												<i class="fa fa-caret-down"></i>
+											</button>
+										</th>
+									</tr>
+								</table>
 								<div class="dropdown-content">
 									<div class="line_block-header" >
 										<div style="padding-left:20px;">
@@ -234,9 +309,18 @@
 						</div>
 					</div> 
 					<div class="dropdown" style="padding-left:40px;">
-						<button class="dropbtn">Grapes
-							<i class="fa fa-caret-down"></i>
-						</button>
+						<table>
+								<tr>
+									<th>
+										<img class="image_btn2">
+									</th>
+									<th>
+										<button class="dropbtn ">Grapes 
+											<i class="fa fa-caret-down"></i>
+										</button>
+									</th>
+								</tr>
+						</table>
 						<div class="dropdown-content">
 							<div class="line_block-header">
 								<div style="padding-left:20px;">
@@ -274,9 +358,18 @@
 						</div>
 					</div> 
 					<div class="dropdown" style="padding-left:40px;">
-						<button class="dropbtn">Pairigs 
-							<i class="fa fa-caret-down"></i>
-						</button>
+						<table>
+								<tr>
+									<th>
+										<img class="image_btn3">
+									</th>
+									<th>
+										<button class="dropbtn ">Pairigs 
+											<i class="fa fa-caret-down"></i>
+										</button>
+									</th>
+								</tr>
+						</table>
 						<div class="dropdown-content">
 							<div class="line_block-header">
 								<div style="padding-left:20px;">
@@ -329,7 +422,7 @@
 		</header>
 		
 		<h2 style="padding-top:120px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
-		<div>
+		<div >
 		<div class="line_block">
 			<div style="padding-left:20px;">
 			<div  style="width:500px;">
@@ -451,7 +544,7 @@
 							<table style="padding-left:30px; width:800px;border-spacing: 12px ; ">
 								<tr style="background-color:#fff5f7;">
 								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2012&price_id=23403923 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -501,7 +594,7 @@
 						
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/podere-san-cristoforo-amaranto-sangiovese/w/1291326?year=2018&price_id=22357821 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -550,7 +643,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/bodegas-arzuaga-navarro-sl-ribera-del-duero-crianza/w/7932?year=2017&price_id=22357614 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -599,7 +692,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/mar-de-frades-rias-baixas-albarino/w/1143504?year=2019&price_id=22357932 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -648,7 +741,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/la-rioja-alta-vina-alberdi-reserva/w/7976?year=2015&price_id=22355672-->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -697,7 +790,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/pago-de-los-capellanes-crianza-tinto/w/16226?year=2017&price_id=22356154-->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -746,7 +839,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/es-de-muller-legitim-crianza/w/1210435?year=2017&price_id=22357413 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -795,7 +888,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/claudie-jobard-rully-montagne-la-folie/w/1219862?year=2018&price_id=23917702 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -844,7 +937,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/jorge-ordonez-and-co-no-2-victoria/w/1285845?year=2017&price_id=22356826 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -893,7 +986,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/compania-de-vinos-trico-nicolas-albarino/w/1634161?year=2015&price_id=22356711 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -942,7 +1035,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/venus-la-universal-dido-la-solucio-rosa/w/5479963?year=2018&price_id=22357252 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -991,7 +1084,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!-- https://www.vivino.com/la-vicalanda-reserva/w/1126221?year=2014&price_id=22356601-->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>
@@ -1040,7 +1133,7 @@
 								</tr>
 								<tr style="background-color:#fff5f7;padding-top:20px;">
 								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2010&price_id=23538257 -->
-									<th>
+									<th class="boxShadow8">
 										<div class="line_block">
 										
 											<div>

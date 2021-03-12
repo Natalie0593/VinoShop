@@ -1,127 +1,55 @@
-            .header{
+html { overflow-x: hidden; }
+           .header{
 				position: absolute;
 				top: 0;
 				left: 50%;
 				margin-left: -50vw;
 				width: 100vw;
-				height: 130px;
+				height: 110px;
 				background-color: #ad0028;
 			}
-
-			* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-
-
-/* Slideshow container */
-.slideshow-container {
-  height:320px;
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.container{
-width: 210px;
-height:320px;
-display: inline-block;
-background-color:#e9edf5;
-padding-bottom:5px;
-}
-
-.container-img{
-width: 70px;
-height:230px;
-}
-
-.container-txt{
-height:50px;
-}
-
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.image-caption {
-  position: absolute;
-  background-color: #ff000075;
-  bottom: 4px;
-  width: 100%;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-			.navbar {
+			.grid-container {
+                display: grid;
+				height: 50px;
+                grid-template-columns: 10em 10em 10em;
+				grid-template-rows: 2em;
+            }
+			 .grid-item {
+                text-align:center;
+                font-size: 0.9em;
+                padding: 0.7em;
+                color: white;
+            }
+			.img{
+			width: 125px; 
+			height: 450px;
+			margin-left:50px;
+			margin-top:100px
+			}
+			.txt {
+            border: 1px solid red;
+            padding: 20px;
+			}
+			.table{
+			 height:650px;
+			 background-color:#fcf9f5;
+			}
+			.table2{
+			 padding-top:10px;
+			 height:450px;
+			 width:auto;
+			}
+			.table3{
+			 padding-top:10px;
+			 height:650px;
+			 width:auto;
+			 background: url(../img/bridal-veil-fall-52449_1920.jpg);
+			 background-repeat: no-repeat;
+			 background-attachment: fixed;
+			 background-size: cover;
+			}
+						
+        	.navbar {
 				overflow: hidden;
 				background-color: #ad0028;
 				font-family: Arial, Helvetica, sans-serif;
@@ -181,6 +109,7 @@ height:50px;
 			}
 			.line_block {  
 			float:left; 
+			padding-top:20px;
 			text-align:center;
 			}
 			.rating {
@@ -189,12 +118,12 @@ height:50px;
 	display: none;
 }
 .rating:not(:checked) > label {
-	width: 21px;
+	width: 22px;
 	float: right;
 	padding: 0;
 	cursor: pointer;
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 22px;
+	line-height: 22px;
 	color: lightgrey;
 	text-shadow: 1px 1px #bbb;
 }
@@ -219,17 +148,34 @@ height:50px;
 }
 .rate > label:active {
 	position: relative;
-	}
-	
-	.table{
+}
+.table-left{
 	text-align: left;
 	}
-	.link {
+	.hr{
+	border-color: red;
+	width:240px;
+	margin-left:1000px;
+	margin-top:290px;
+	}
+	.td-table{
+	width:300px;
+	padding: 5px;
+	text-align:center;
+	}
+	.absol_position{
+	position:absolute;
+	}
+		.link {
    color: #fff;
    border-radius: 3px;
    text-decoration: none;
    text-align:center;
 }
+			.line_block-header {  
+			float:left; 
+			text-align:center;
+			}
 .name-cite{
 		 color: white;
 		 font-family: «Great Vibes», cursive;
@@ -273,7 +219,7 @@ height:50px;
 		margin-left: 60px;
 		}
 		.image_btn{
-			background-image: url('../img/vino.ico');
+			background-image: url('img/vino.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
@@ -281,7 +227,7 @@ height:50px;
 			transition: width 0.4s ease-in-out;
 			}
 			.image_btn2{
-			background-image: url('../img/grapes.ico');
+			background-image: url('img/grapes.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
@@ -289,14 +235,10 @@ height:50px;
 			transition: width 0.4s ease-in-out;
 			}
 			.image_btn3{
-			background-image: url('../img/pairings.ico');
+			background-image: url('img/pairings.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
 			padding: 15px;
 			transition: width 0.4s ease-in-out;
-			}
-			.name_v{
-			color: #333333;
-			font-family: Georgia, serif; font-size: 15px;
 			}
