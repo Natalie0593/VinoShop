@@ -14,18 +14,6 @@
 				height: 110px;
 				background-color: #ad0028;
 			}
-			.grid-container {
-                display: grid;
-				height: 50px;
-                grid-template-columns: 10em 10em 10em;
-				grid-template-rows: 2em;
-            }
-			 .grid-item {
-                text-align:center;
-                font-size: 0.9em;
-                padding: 0.7em;
-                color: white;
-            }
 			.img{
 			width: 125px; 
 			height: 450px;
@@ -227,6 +215,39 @@
 				padding: 0.5em;
 				box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 			}
+			.button {
+				width: 100px;
+				height: 40px;	
+				border-color:#dc143c;
+				font-family: ‘Helvetica Neue’, sans-serif;
+				font-size: 12px;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 25px;
+				
+				background-color:#fffafa;
+				padding: 5px;
+				outline: none;
+			}
+			.h2{
+				font-size: 25px;
+				color: #605833; font-family: Georgia, arial, serif;
+				margin-left: 60px;
+				padding-top:130px;
+			}
+			.h3{
+			text-align:left;
+			padding-left:25px;
+			font-family: ‘Trocchi’, serif;
+			font-size: 25px;
+			color: #7c795d;
+			}		
+            .info-vine{
+			 font-family: ‘Raleway’,sans-serif;
+			 font-size: 14px;
+			 background-color:#ffe0ed;
+			 text-align: left;
+			}			
 		</style>
      </head>
     <body style="overflow-x:  hidden;background-color:#f5f5f5;">
@@ -421,48 +442,49 @@
 		<!----------------------------------------------------------------------->
 		</header>
 		
-		<h2 style="padding-top:120px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
+		<h2 class="h2" style="padding-top:150px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
+		
 		<div >
 		<div class="line_block">
 			<div style="padding-left:20px;">
 			<div  style="width:500px;">
 						<div>
-						  <table style=" width:400px;" >
+						  <table style=" width:400px;border-spacing: 5px;" >
 							<!-- Wine Types-->
-									<caption><h3>Wine Types</h3></caption>
-									<tr>
-										<td> Red</td>
-										<td > White</td>
-										<td > Sparking</td>
+									<caption><h3 class="h3">Wine Types</h3></caption>
+									<tr style="color:#641c34;">
+										<td ><button class="button">Red</button></td>
+										<td><button class="button">White</button></td>
+										<td><button class="button">Sparking</button></td>
 									</tr>
 									<tr>
-										<td > Rose</td>
-										<td > Dessert</td>
-										<td > Fortified</td>
+										<td><button class="button">Rose</button></td>
+										<td><button class="button">Dessert</button></td>
+										<td><button class="button">Fortified</button></td>
 									</tr>
 							</table>
 						</div>	
 					</div>
 			
 			<div style="padding-top:30px;">
-							<table style=" width:500px;">
+							<table style=" width:500px;border-spacing: 5px;">
 								<!-- Price Range-->
-								<caption ><h3>Grapes</h3></caption>
+								<caption><h3 class="h3">Grapes</h3></caption>
 									<tr>
-										<td>Cabernet Franc</td>
-										<td>Cabernet Sauvignon</td>
-										<td>Chardonnay</td>
+										<td><button class="button">Cabernet Franc</button></td>
+										<td><button class="button">Cabernet Sauvignon</button></td>
+										<td><button class="button">Chardonnay</button></td>
 									</tr>
 									<tr>
-										<td>Grenache</td>
-										<td>Maldec</td>
-										<td>Merlot</td>
-										<td>Pinot Noir</td>
+										<td><button class="button">Grenache</button></td>
+										<td><button class="button">Maldec</button></td>
+										<td><button class="button">Merlot</button></td>
+										<td><button class="button">Pinot Noir</button></td>
 									</tr>
 									<tr>
-										<td>Riesling</td>
-										<td>Sauvignon Blanc</td>
-										<td>Shiraz/Syrah</td>
+										<td><button class="button">Riesling</button></td>
+										<td><button class="button">Sauvignon Blanc</button></td>
+										<td><button class="button">Shiraz/Syrah</button></td>
 									</tr>
 							</table>
 						</div>
@@ -470,65 +492,67 @@
 								<!-- Grapes-->
 								<!-- Food pairings-->
 						<div style="padding-top:30px;">
-							<table style=" width:500px;" >
-								<caption><h3>Food pairings</h3></caption>
+							<table style=" width:500px;border-spacing: 5px;" >
+								<caption><h3 class="h3">Food pairings</h3></caption>
 									<tr>
-										<td>Aperitif</td>
-										<td> Any junk food will do</td>
-										<td>Appetizers and snacks</td>
-										<td>Mushrooms</td>
+										<td><button class="button">Aperitif</button></td>
+										<td><button class="button">Any junk food will do</button></td>
+										<td><button class="button">Appetizers and snacks</button></td>
+										<td><button class="button">Mushrooms</button></td>
 									</tr>
 									<tr>
-										<td > Beef</td>
-										<td > Rich fish(salmon,tuna ect)</td>
-										<td>Blue cheese</td>
-										<td>Cured Meat</td>
-										
+										<td><button class="button">Beef</button></td>
+										<td><button class="button">Rich fish</button></td>
+										<td><button class="button">Blue cheese</button></td>
+										<td><button class="button">Cured Meat</button></td>
 									</tr>
 									<tr>
-										<td > Fruity dessert</td>
-										<td > Game(deer, vernesion)</td>
-										<td > Goat cheese</td>
-										<td>Shellfish</td>
+										<td><button class="button">Fruity dessert</button></td>
+										<td><button class="button">Game(deer, vernesion)</button></td>
+										<td><button class="button">Goat cheese</button></td>
+										<td><button class="button">Shellfish</button></td>
 									</tr>
-									<tr>
-										<td > Lamb</td>
-										<td > Lean fish</td>
-										<td > Mature and hard cheese</td>
-										<td>Pasta</td>
+									<tr id="text">
+										<td><button class="button">Lamb</button></td>
+										<td><button class="button">Lean fish</button></td>
+										<td><button class="button">Mature and hard cheese</button></td>
+										<td><button class="button">Pasta</button></td>
 									</tr>
-									<tr>
-										<td > Mild and soft cheese</td>
-										<td > Pork</td>
-										<td > Poultry</td>
-										<td>Spicy food</td>
+									<tr id="text1">
+										<td><button class="button">Mild and soft cheese</button></td>
+										<td><button class="button">Pork</button></td>
+										<td><button class="button">Poultry</button></td>
+										<td><button class="button">Spicy food</button></td>
 									</tr>
-									<tr>
-										<td > Sweet desserts</td>
-										<td > Veal</td>
-										<td > Vegetarian</td>
+									<tr id="text2">
+										<td><button class="button">Sweet desserts</button></td>
+										<td><button class="button">Veal</button></td>
+										<td><button class="button">Vegetarian</button></td>
 									</tr>
 							</table>
+							<button id="hider"  >Shall less..</button>
+							<button id="opener">Shall all..</button>
 						</div>
 						<!-- Countries-->
 						<div style="padding-top:30px;">
-							<table style=" width:500px;" >
-								<caption><h3>Countries</h3></caption>
+							<table style=" width:500px;border-spacing: 5px;" >
+								<caption><h3 class="h3">Countries</h3></caption>
 									<tr>
-										<td>Argentina</td>
-										<td> Australia</td>
-										<td>Austria</td>
-										<td>Chile</td>
+										<td><button class="button">Argentina</button></td>
+										<td><button class="button">Australia</button></td>
+										<td><button class="button">Austria</button></td>
+										<td><button class="button">Chile</button></td>
 									</tr>
 									<tr>
-										<td>France</td>
-										<td>Germany</td>
-										<td>Italy</td>
-										<td>Portugal</td>
+										<td><button class="button">France</button></td>
+										<td><button class="button">Germany</button></td>
+										<td><button class="button">Italy</button></td>
+										<td><button class="button">Portugal</button></td>
 									</tr>
 									<tr>
-										<td>Spain</td>
-										<td>United States</td>
+										<td><button class="button">Spain</button></td>
+										<td><button class="button">United State</button></td>
+										
 									</tr>
 							</table>		
 						</div>
@@ -548,7 +572,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -560,7 +584,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>La Rioja Alta</p>
 											<p>Viña Ardanza Reserva 2012</p>
 											<p>Red wine from Rioja Spain</p>
@@ -586,8 +610,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -598,7 +622,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -610,7 +634,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Podere San Cristoforo</p>
 											<p>Amaranto Sangiovese 2018</p>
 											<p>Red wine from Maremma Toscana Italy</p>
@@ -636,8 +660,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -647,7 +671,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -659,7 +683,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Arzuaga</p>
 											<p>Ribera del Duero Crianza 2017</p>
 											<p>Red wine from Ribera del Duero Spain</p>
@@ -685,8 +709,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -696,7 +720,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -708,7 +732,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Mar de Frades</p>
 											<p>Rías Baixas Albariño 2019</p>
 											<p>White wine from Rías Baixas Spain</p>
@@ -734,8 +758,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -745,7 +769,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -757,7 +781,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>La Rioja Alta</p>
 											<p>Viña Alberdi Reserva 2015</p>
 											<p>Red wine from Rioja Spain</p>
@@ -783,8 +807,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -794,7 +818,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -806,7 +830,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Pago de Los Capellanes</p>
 											<p>Crianza Tinto 2017</p>
 											<p>Red wine from Ribera del Duero Spain</p>
@@ -832,8 +856,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -843,7 +867,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -855,7 +879,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>De Muller</p>
 											<p>Legítim Crianza 2017</p>
 											<p>Red wine from Priorat Spain</p>
@@ -881,8 +905,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -892,7 +916,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -904,7 +928,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Domaine Claudie Jobard</p>
 											<p>Rully Montagne La Folie 2018</p>
 											<p>White wine from Rully France</p>
@@ -930,8 +954,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -941,7 +965,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -953,7 +977,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Jorge Ordóñez</p>
 											<p>No. 2 Victoria 2017</p>
 											<p>Dessert wine from Málaga Spain</p>
@@ -979,8 +1003,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -990,7 +1014,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -1002,7 +1026,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Compañía de Vinos Tricó</p>
 											<p>Nicolás Albariño 2015</p>
 											<p>White wine from Rías Baixas Spain</p>
@@ -1028,8 +1052,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -1039,7 +1063,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -1051,7 +1075,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>Venus la Universal</p>
 											<p>Dido La Solució Rosa 2018</p>
 											<p>Rosé wine from Montsant Spain</p>
@@ -1077,8 +1101,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -1088,7 +1112,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -1100,7 +1124,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>La Vicalanda</p>
 											<p>Reserva 2014</p>
 											<p>Red wine from Rioja Spain</p>
@@ -1126,8 +1150,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -1137,7 +1161,7 @@
 										<div class="line_block">
 										
 											<div>
-												<table style="background-color:#ebc7df;">
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
@@ -1149,7 +1173,7 @@
 												</table>
 											</div>
 										</div>
-										<div style="background-color:#ffe0ed;text-align: left;" >
+										<div class="info-vine" >
 											<p>La Rioja Alta</p>
 											<p>Viña Ardanza Reserva 2010</p>
 											<p>Red wine from Rioja Spain</p>
@@ -1175,8 +1199,8 @@
 												</th>
 											</tr>
 										</table>
-										<div style="padding-top:70px;">
-										<button>View shops</button>
+										<div style="padding-top:50px;">
+										<button class="button">View shops</button>
 										</div>
 									</th>
 								</tr>
@@ -1185,5 +1209,21 @@
 					</div>
 		    </div> 
 		</div>
+		<script>
+    // Здесь не важно, как мы скрываем текст.
+    // Также можно использовать style.display:
+    document.getElementById('hider').onclick = function() {
+      document.getElementById('text').hidden = true;
+	  document.getElementById('text1').hidden = true;
+	  document.getElementById('text2').hidden = true;
+	  document.getElementById('opener').hidden = false;
+    }
+	 document.getElementById('opener').onclick = function() {
+      document.getElementById('text').hidden = false;
+	  document.getElementById('text1').hidden = false;
+	  document.getElementById('text2').hidden = false;
+	  document.getElementById('hider').hidden = false;
+    }
+  </script>
 	</body>
 </html>

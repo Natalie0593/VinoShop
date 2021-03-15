@@ -8,21 +8,10 @@
 				height: 110px;
 				background-color: #ad0028;
 			}
-			.grid-container {
-                display: grid;
-				height: 50px;
-                grid-template-columns: 10em 10em 10em;
-				grid-template-rows: 2em;
-            }
-			 .grid-item {
-                text-align:center;
-                font-size: 0.9em;
-                padding: 0.7em;
-                color: white;
-            }
+			
 			.img{
-			width: 125px; 
-			height: 450px;
+			width: 150px; 
+			height: 500зx;
 			margin-left:50px;
 			margin-top:100px
 			}
@@ -31,12 +20,12 @@
             padding: 20px;
 			}
 			.table{
-			 height:650px;
+			 height:750px;
 			 background-color:#fcf9f5;
 			}
 			.table2{
 			 padding-top:10px;
-			 height:450px;
+			 height:400px;
 			 width:auto;
 			}
 			.table3{
@@ -155,14 +144,10 @@
 	.hr{
 	border-color: red;
 	width:240px;
-	margin-left:1000px;
+	margin-left:1010px;
 	margin-top:290px;
 	}
-	.td-table{
-	width:300px;
-	padding: 5px;
-	text-align:center;
-	}
+	
 	.absol_position{
 	position:absolute;
 	}
@@ -261,7 +246,7 @@
 			outline: none;
 			border: none;
 			background-color: white;
-			background-image: url('img/search_ico.ico');
+			background-image: url('../img/search_ico.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
@@ -285,7 +270,7 @@
 		margin-left: 60px;
 		}
 		.image_btn{
-			background-image: url('img/vino.ico');
+			background-image: url('../img/vino.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
@@ -293,7 +278,7 @@
 			transition: width 0.4s ease-in-out;
 			}
 			.image_btn2{
-			background-image: url('img/grapes.ico');
+			background-image: url('../img/grapes.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
@@ -301,10 +286,11 @@
 			transition: width 0.4s ease-in-out;
 			}
 			.image_btn3{
-			background-image: url('img/pairings.ico');
+			background-image: url('../img/pairings.ico');
 			background-size: 20px 20px;
 			background-position: 10px 10px; 
 			background-repeat: no-repeat;
 			padding: 15px;
 			transition: width 0.4s ease-in-out;
 			}
+				

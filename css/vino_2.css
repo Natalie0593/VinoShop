@@ -8,18 +8,6 @@ html { overflow-x: hidden; }
 				height: 110px;
 				background-color: #ad0028;
 			}
-			.grid-container {
-                display: grid;
-				height: 50px;
-                grid-template-columns: 10em 10em 10em;
-				grid-template-rows: 2em;
-            }
-			 .grid-item {
-                text-align:center;
-                font-size: 0.9em;
-                padding: 0.7em;
-                color: white;
-            }
 			.img{
 			width: 125px; 
 			height: 450px;
@@ -39,15 +27,7 @@ html { overflow-x: hidden; }
 			 height:450px;
 			 width:auto;
 			}
-			.table3{
-			 padding-top:10px;
-			 height:650px;
-			 width:auto;
-			 background: url(../img/bridal-veil-fall-52449_1920.jpg);
-			 background-repeat: no-repeat;
-			 background-attachment: fixed;
-			 background-size: cover;
-			}
+			
 						
         	.navbar {
 				overflow: hidden;
@@ -152,12 +132,7 @@ html { overflow-x: hidden; }
 .table-left{
 	text-align: left;
 	}
-	.hr{
-	border-color: red;
-	width:240px;
-	margin-left:1000px;
-	margin-top:290px;
-	}
+	
 	.td-table{
 	width:300px;
 	padding: 5px;

@@ -5,16 +5,33 @@
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
 		<style>
-		
+		.info-vine{
+			 font-family: ‘Rouge Script’, cursive;
+			 text-align: left;
+			 position:absolute;
+			}
+			.image_btn4{
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			padding-right:-20px;
+			}
+			.td-table{
+				width:200px;
+				padding-right: 15px;
+				text-align:left;
+			}
 		</style>
 	</head>
     <body>
-		<header class="header" style="background-color:#ad0028;">
+	<header class="header" style="background-color:#ad0028;">
 	
-	<table >
+	<table width=100%; >
 		<tr>
 			<th style="padding-bottom:0px;">
-				<div class="line_block">
+				<div class=".line_block-header">
 					<table>
 						<tr>
 							<th>
@@ -53,10 +70,10 @@
 									</tr>
 								</table>
 								<div class="dropdown-content">
-									<div class="line_block" >
+									<div class="line_block-header" >
 										<div style="padding-left:20px;">
 											<a href="#">Red</a>
-											<table class="table">
+											<table class="table-left">
 												<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
 												<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
 												<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
@@ -64,10 +81,10 @@
 											</table>
 										</div>
 									</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
 									<a href="#">White</a>
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">German Riesling</td></tr>
 										<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
 										<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
@@ -75,7 +92,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
 								<!--Sparkling Rosé Port Dessert-->
 								<a href="#">Sparkling</a>
@@ -100,9 +117,9 @@
 								</tr>
 						</table>
 						<div class="dropdown-content">
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
 										<tr><td style="padding-top:10px;">Montepulciano</td></tr>
 										<tr><td style="padding-top:10px;">Chardonnay</td></tr>
@@ -111,9 +128,9 @@
 									</table>
 								</div>
 							</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
 										<tr><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
 										<tr><td style="padding-top:10px;">Zinfandel</td></tr>
@@ -122,9 +139,9 @@
 									</table>
 								</div>
 							</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Pinot Grigio</td></tr>
 										<tr><td style="padding-top:10px;">Riesling</td></tr>
 										<tr><td style="padding-top:10px;">Grauburgunder</td></tr>
@@ -149,9 +166,9 @@
 								</tr>
 						</table>
 						<div class="dropdown-content">
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Beef</td></tr>
 										<tr><td style="padding-top:10px;">Lamb</td></tr>
 										<tr><td style="padding-top:10px;">Veal</td></tr>
@@ -162,9 +179,9 @@
 									</table>
 								</div>
 							</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Cured meat</td></tr>
 										<tr><td style="padding-top:10px;">Goat Cheese</td></tr>
 										<tr><td style="padding-top:10px;">Mature and hard cheese</td></tr>
@@ -174,9 +191,9 @@
 									</table>
 								</div>
 							</div>
-							<div class="line_block">
+							<div class="line_block-header">
 								<div style="padding-left:20px;">
-									<table class="table">
+									<table class="table-left">
 										<tr><td style="padding-top:10px;">Aperitif</td></tr>
 										<tr><td style="padding-top:10px;">Appetizers and snacks</td></tr>
 										<tr><td style="padding-top:10px;">Lean fish</td></tr>
@@ -192,16 +209,20 @@
 			</th>
 		</tr>
 	</table>
-
+		
+		
+		<!----------------------------------------------------------------------->
+		
+		<!----------------------------------------------------------------------->
 		</header>
 		
 				<div class="table">
 					<table>
 					<tr><th>
 					<p class="absol_position" style="top:40px; left:50px;"><img class="img" src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" alt=""  /><p>
-					<p class="absol_position" style="top:120px; left:300px;">La Vicalanda</p>
-					<p class="absol_position" style="top:160px; left:300px;">Reserva</p>
-					<p class="absol_position" style="top:200px; left:300px;">Red wine from Rioja · Spain</p>
+					<p class="info-vine" style="top:140px; left:300px;font-size: 18px;">Fonte Pequena</p>
+					<p class="info-vine" style="top:175px; left:300px;font-size: 22px;"><b>Maré Alta 2017<b></p>
+					<p class="info-vine" style="top:230px; left:300px;font-size: 15px;">White wine from Vinho Verde · Portugal</p>
 					
 						<table class="absol_position" style="top:280px; left:300px;">
 							<tr>
@@ -237,46 +258,58 @@
 							</tr>
 						</table>
 					
-					<p class="txt" style="position:absolute; top:200px; left:1000px;">Price: <br>€14.50<br><br><br>Better value? Available<br> prices for a 4 Spanish Rioja Red<br> are starting at around €10.12</p>
+					<p class="txt" style="position:absolute; top:200px; left:1000px;">Price: <br>€14.50<br><br>Better value? Available<br> prices for a 4 Spanish Rioja Red<br> are starting at around €10.12</p>
 					<hr class="hr" >
 					<br>
 					</table>
 				</div>
 				
 				<div class="table2">
-				<div style="padding-top:80px;padding-left:60px;">
+				<div style="padding-top:50px;padding-left:130px;">
 					<h2>Facts about the wine</h2>
 					<table frame="hsides" rules="rows">
-					<tr><td class="td-table">Winery</td><td style="width:600px;">	Podere San Cristoforo</td></tr>
-					<tr><td class="td-table">Grapes</td><td style="width:600px;">Sangiovese</td></tr>
-					<tr><td class="td-table">Region</td><td style="width:600px;">Italy / Toscana / Maremma Toscana</td></tr>
-					<tr><td class="td-table">Wine style</td><td style="width:600px;">Tuscan Red</td></tr>
-					<tr><td class="td-table">Alcohol content</td><td style="width:600px;">13%</td></tr>
-					<tr><td class="td-table">Allergens</td><td style="width:600px;">Contains sulfites</td></tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/barrel.png');"></th><th class="td-table">Winery</th><td style="width:500px;">Podere San Cristoforo</td>
+						</tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/grapes.ico');"></th><td class="td-table">Grapes</td><td style="width:500px;">Sangiovese</td>
+						</tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/region.ico');"></th><td class="td-table">Region</td><td style="width:500px;">Italy / Toscana / Maremma Toscana</td>
+						</tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/vinary_style.ico');"></th><td class="td-table">Wine style</td><td style="width:500px;">Tuscan Red</td>
+						</tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/alcohol.ico');"></th><td class="td-table">Alcohol content</td><td style="width:500px;">13%</td>
+						</tr>
+						<tr>
+							<th style="width:60px;"><img class="image_btn4" style="background-image: url('img/alergents.ico');"></th><td class="td-table">Allergens</td><td style="width:500px;">Contains sulfites</td>
+						</tr>
 					</table>
 					</div>
 				</div>
 			
 			<div  style="background-color:#fcf9f5; padding-top:80px;padding-left:60px;height:650px;width:auto;">
 			<table >
-			<!--<img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg">-->
+			
 			<tr>
-				<td  style="padding: 25px;" >
-					<h2>Food that goes well with this wine</h2><br>Our wine experts think this<br> Portuguese Vinho Verde White<br> wine would be a match made in <br>heaven with these dishes.<br> Bon appétit! <br><br>Are you cooking something else? <br>Search for wines by food pairings
+				<td  style="padding: 25px;font-family: ‘Bitter’, serif;font-size:18px;" >
+					<h2 >Food that goes well with this wine</h2><br>Our wine experts think this<br> Portuguese Vinho Verde White<br> wine would be a match made in <br>heaven with these dishes.<br> Bon appétit! <br><br>Are you cooking something else? <br>Search for wines by food pairings
 				</td>
 				<td style="padding: 35px;" >
 					<img src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" style="height:300px; width:85px;" alt="">
 					</td>
 				<td style="padding-left: 130px;padding-right:40px;" >
-					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<a href="search.html" style="text-decoration: none;" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
 					<p style="padding-top:15px;padding-left:35px;">Shellfish</p></a>
 				</td>
 				<td style="padding: 35px;padding-right:40px;" >
-					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<a href="search.html" style="text-decoration: none;" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
 					<p style="padding-top:15px;padding-left:35px;">Vegetarian</p></a>
 				</td>
 				<td style="padding: 35px;padding-right:40px;" >
-					<a href="search.html" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
+					<a href="search.html" style="text-decoration: none;" target="_blank"><img src="https://i.pinimg.com/736x/c4/b0/fd/c4b0fda078f3f25eca7848480ff77e3d.jpg" style="height:160px;width:140px;" alt="">
 					<p style="padding-top:15px;padding-left:5px;">Appetizers and snacks</p></a>
 				</td>
 			</tr>
@@ -285,7 +318,7 @@
 			
 			<div class="table3" style="">
 			<div style="padding-left:120px;padding-top:50px;" >
-			<table style="background-color:white; border-radius: 5px; width:400px; height:550px;">
+			<table style="background-color:white; border-radius: 5px; width:430px; height:550px;">
 				<tr>
 					<td style="padding-left:10px;height:20px;">
 						<h2>Wine style</h2>
@@ -294,7 +327,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="padding-left:10px" >Vinho Verde is a widely consumed white wine from Northern Portugal. The wine tends to be made from local grapes such as Alvarinho (Albarino), Loureiro, Arinto, and Azal.
+					<td style="padding-left:10px;font-family: ‘Bitter’, serif;font-size:18px;" >Vinho Verde is a widely consumed white wine from Northern Portugal. The wine tends to be made from local grapes such as Alvarinho (Albarino), Loureiro, Arinto, and Azal.
 						Vinho Verde is a light, refreshing wine with lots of floral and green fruit notes. The wine often has a slight carbonation to it, though not enough that it could be referred to as a sparkling wine.
 						A Vinho Verde region was estab...
 					</td>
