@@ -1,4 +1,4 @@
-.header{
+			.header{
 				position: absolute;
 				top: 0;
 				left: 50%;
@@ -7,18 +7,7 @@
 				height: 110px;
 				background-color: #ad0028;
 			}
-			.grid-container {
-                display: grid;
-				height: 50px;
-                grid-template-columns: 10em 10em 10em;
-				grid-template-rows: 2em;
-            }
-			 .grid-item {
-                text-align:center;
-                font-size: 0.9em;
-                padding: 0.7em;
-                color: white;
-            }
+			
 			.img{
 			width: 125px; 
 			height: 450px;

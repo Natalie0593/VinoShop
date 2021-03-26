@@ -11,7 +11,7 @@
 			
 			.img{
 			width: 150px; 
-			height: 500зx;
+			height: 500px;
 			margin-left:50px;
 			margin-top:100px
 			}
@@ -37,6 +37,7 @@
 			 background-attachment: fixed;
 			 background-size: cover;
 			}
+			
 						
         	.navbar {
 				overflow: hidden;
@@ -102,161 +103,142 @@
 			text-align:center;
 			}
 			.rating {
-	}
-.rating:not(:checked) > input {
-	display: none;
-}
-.rating:not(:checked) > label {
-	width: 22px;
-	float: right;
-	padding: 0;
-	cursor: pointer;
-	font-size: 22px;
-	line-height: 22px;
-	color: lightgrey;
-	text-shadow: 1px 1px #bbb;
-}
-.rating:not(:checked) > label:before {
-	content: '★';
-}
-.rating > input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px #c60;
-}
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-	color: gold;
-}
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
-}
-.rate > label:active {
-	position: relative;
-}
-.table-left{
-	text-align: left;
-	}
-	.hr{
-	border-color: red;
-	width:240px;
-	margin-left:1010px;
-	margin-top:290px;
-	}
-	
-	.absol_position{
-	position:absolute;
-	}
-		.link {
-   color: #fff;
-   border-radius: 3px;
-   text-decoration: none;
-   text-align:center;
-}
+			}
+			.rating:not(:checked) > input {
+				display: none;
+			}
+			.rating:not(:checked) > label {
+				width: 22px;
+				float: right;
+				padding: 0;
+				cursor: pointer;
+				font-size: 22px;
+				line-height: 22px;
+				color: lightgrey;
+				text-shadow: 1px 1px #bbb;
+			}
+			.rating:not(:checked) > label:before {
+				content: '★';
+			}
+			.rating > input:checked ~ label {
+				color: gold;
+				text-shadow: 1px 1px #c60;
+			}
+			.rating:not(:checked) > label:hover,
+			.rating:not(:checked) > label:hover ~ label {
+				color: gold;
+			}
+			.rating > input:checked + label:hover,
+			.rating > input:checked + label:hover ~ label,
+			.rating > input:checked ~ label:hover,
+			.rating > input:checked ~ label:hover ~ label,
+			.rating > label:hover ~ input:checked ~ label {
+				color: gold;
+				text-shadow: 1px 1px goldenrod;
+			}
+			.rate > label:active {
+				position: relative;
+			}
+		.table-left{
+			text-align: left;
+			}
+			.hr{
+			border-color: red;
+			width:240px;
+			margin-left:1010px;
+			margin-top:290px;
+			}
+			
+			.absol_position{
+			position:absolute;
+			}
+				.link {
+		   color: #fff;
+		   border-radius: 3px;
+		   text-decoration: none;
+		   text-align:center;
+			}
 			.line_block-header {  
 			float:left; 
 			text-align:center;
 			}
-			    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #212529;
-      text-align: left;
-      background-color: #fff;
-    }
+			 body {
+			  margin: 0;
+			  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			  font-size: 16px;
+			  font-weight: 400;
+			  line-height: 1.5;
+			  color: #212529;
+			  text-align: left;
+			  background-color: #fff;
+			}
 
-    .container {
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+			.container {
+			  max-width: 600px;
+			  margin-left: auto;
+			  margin-right: auto;
+			  padding-left: 15px;
+			  padding-right: 15px;
+			}
 
-    .tabs {
-      display: flex;
-      flex-direction: column;
-    }
+			.tabs {
+			  display: flex;
+			  flex-direction: column;
+			}
 
-    .tabs__links {
-      display: flex;
-      width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px;
-      order: 0;
-      white-space: nowrap;
-      background-color: #fff;
-      border: 1px solid #e3f2fd;
-      box-shadow: 0 2px 4px 0 #e3f2fd;
-    }
+			.tabs__links {
+			  display: flex;
+			  width: 100%;
+			  overflow-x: auto;
+			  overflow-y: hidden;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-bottom: 10px;
+			  order: 0;
+			  white-space: nowrap;
+			  background-color: #fff;
+			  border: 1px solid #e3f2fd;
+			  box-shadow: 0 2px 4px 0 #e3f2fd;
+			}
 
-    .tabs__links>a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 6px 10px;
-      text-align: center;
-      color: #1976d2;
-    }
+			.tabs__links>a {
+			  display: inline-block;
+			  text-decoration: none;
+			  padding: 6px 10px;
+			  text-align: center;
+			  color: #1976d2;
+			}
 
-    .tabs__links>a:hover {
-      background-color: rgba(227, 242, 253, 0.3);
-    }
+			.tabs__links>a:hover {
+			  background-color: rgba(227, 242, 253, 0.3);
+			}
 
-    .tabs>#content-1:target~.tabs__links>a[href="#content-1"],
-    .tabs>#content-2:target~.tabs__links>a[href="#content-2"],
-    .tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
-      background-color: #bbdefb;
-      cursor: default;
-    }
+			.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+			.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+			.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+			  background-color: #bbdefb;
+			  cursor: default;
+			}
 
-    .tabs>div:not(.tabs__links) {
-      display: none;
-      order: 1;
-    }
+			.tabs>div:not(.tabs__links) {
+			  display: none;
+			  order: 1;
+			}
 
-    .tabs>div:target {
-      display: block;
-    }
-.name-cite{
-		 color: white;
-		 font-family: «Great Vibes», cursive;
-		 font-size: 25px;
-		 line-height: 20px;
-		 font-weight: normal;
+			.tabs>div:target {
+			  display: block;
+			}
+		.name-cite{
+			 color: white;
+			 font-family: «Great Vibes», cursive;
+			 font-size: 25px;
+			 line-height: 20px;
+			 font-weight: normal;
 
-		 text-align: center;
-		 text-shadow: 0 1px 1px #fff;
-		 }
-		 input[type=text] {
-			width: 150px;
-			box-sizing: border-box;
-			border: 2px solid #ccc;
-			border-radius: 50px;
-			font-size: 16px;
-			outline: none;
-			border: none;
-			background-color: white;
-			background-image: url('../img/search_ico.ico');
-			background-size: 20px 20px;
-			background-position: 10px 10px; 
-			background-repeat: no-repeat;
-			padding: 12px 20px 12px 40px;
-			transition: width 0.4s ease-in-out;
-		}
-
-		input[type=text]:focus {
-			width: 350px;
-		}
+			 text-align: center;
+			 text-shadow: 0 1px 1px #fff;
+			 }
+		 
 		.h2{
 		font-size: 30px;
 		color: #605833; font-family: Georgia, arial, serif;
