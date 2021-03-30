@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<!--<link rel="stylesheet" href="css/search.css" type="text/css"/>-->
+		<link rel="stylesheet" href="css/search.css" type="text/css"/>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
 		<style>
-		.header{
+			html, body {
+				box-sizing: border-box;
+			}
+
+			body {
+				background: #f5f5f5;
+				color: #000;
+				font-family: 'Oswald', sans-serif;
+			}
+
+			a {
+			  text-align: center;
+			  color: #000;
+			  text-decoration: none;
+			  display: block;
+			  text-transform: uppercase;
+			}
+
+			nav ul li {
+				display: inline-block;
+				padding: 10px 40px 10px 0;
+			    cursor: pointer;
+			}
+
+			.table-all {
+				
+				margin: 20px auto;
+			}
+
+			.box {
+				width:400px;
+				min-height: 140px;
+				min-width: calc(22% - 28px);
+				padding:10px;
+				margin: 15px;
+				border-width: 3px;
+				float: left;
+				box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+			}
+
+			.box.alizarin{
+			  border: 3px solid #e74c3c;
+			}
+			.box.wisteria{
+			  border: 3px solid #8e44ad;
+			}
+			.box.emerland{
+			  border: 3px solid #2ecc71;
+			}
+			.box.belizehole{
+			  border: 3px solid #2980b9;
+			}
+			.box.sunflower{
+			  border: 3px solid #b5a642;
+			}
+			.box.eggplant {
+			  border: 3px solid #990066;
+			}
+
+			.text-alizarin{
+			  color : #e74c3c;
+			}
+			.text-wisteria{
+			  color : #8e44ad;
+			}
+			.text-emerland{
+			  color : #2ecc71;
+			}
+			.text-belizehole{
+			  color : #2980b9;
+			}
+			.text-sunflower{
+			  color : #f1c40f;
+			}
+			.text-eggplant{
+			  color : #b5a642;
+			}
+
+			.hide {
+			  opacity: 1;
+			  animation-name: a1;
+			  animation-duration: 2s;
+			  animation-fill-mode: forwards;
+			}
+
+			@keyframes a1{
+			  to {
+					/*visibility: hidden;*/
+					opacity: 0;
+					min-height: 0; 
+					min-width: 0;
+					max-height: 0;
+					max-width: 0;
+					padding: 0;
+					margin: 0;
+					border: 0;
+			  } 
+			}
+			.line_block {  
+			float:left; 
+			margin: 0 15px 15px 0; 
+			text-align:center;
+			padding: 10px;
+			}
+			<!----------------------------------------------------------->
+			.header{
 				position: absolute;
 				top: 0;
 				left: 50%;
@@ -29,13 +134,7 @@
 			 background-color:#f2e6e8;
 			}
 			
-			.line_block {  
-			float:left; 
-			margin: 0 15px 15px 0; 
-			text-align:center;
-			padding: 10px;
-			}
-		.line_block_header {  
+			.line_block_header {  
 			float:left; 
 			padding-top:20px;
 			text-align:center;
@@ -105,51 +204,51 @@
 			text-align:center;
 			}
 			.rating {
-	}
-.rating:not(:checked) > input {
-	display: none;
-}
-.rating:not(:checked) > label {
-	width: 21px;
-	float: right;
-	padding: 0;
-	cursor: pointer;
-	font-size: 28px;
-	line-height: 28px;
-	color: lightgrey;
-	text-shadow: 1px 1px #bbb;
-}
-.rating:not(:checked) > label:before {
-	content: '★';
-}
-.rating > input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px #c60;
-}
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-	color: gold;
-}
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
-}
-.rate > label:active {
-	position: relative;
-	}
-	.table-left{
-	text-align: left;
-	}
-	.link {
-   color: #fff;
-   border-radius: 3px;
-   text-decoration: none;
-   text-align:center;
-}
+				}
+			.rating:not(:checked) > input {
+				display: none;
+			}
+			.rating:not(:checked) > label {
+				width: 21px;
+				float: right;
+				padding: 0;
+				cursor: pointer;
+				font-size: 28px;
+				line-height: 28px;
+				color: lightgrey;
+				text-shadow: 1px 1px #bbb;
+			}
+			.rating:not(:checked) > label:before {
+				content: '★';
+			}
+			.rating > input:checked ~ label {
+				color: gold;
+				text-shadow: 1px 1px #c60;
+			}
+			.rating:not(:checked) > label:hover,
+			.rating:not(:checked) > label:hover ~ label {
+				color: gold;
+			}
+			.rating > input:checked + label:hover,
+			.rating > input:checked + label:hover ~ label,
+			.rating > input:checked ~ label:hover,
+			.rating > input:checked ~ label:hover ~ label,
+			.rating > label:hover ~ input:checked ~ label {
+				color: gold;
+				text-shadow: 1px 1px goldenrod;
+			}
+			.rate > label:active {
+				position: relative;
+				}
+				.table-left{
+				text-align: left;
+				}
+				.link {
+			   color: #fff;
+			   border-radius: 3px;
+			   text-decoration: none;
+			   text-align:center;
+			}
 			.line_block-header {  
 			float:left; 
 			text-align:center;
@@ -209,10 +308,9 @@
 			transition: width 0.4s ease-in-out;
 			}
 			.boxShadow8 {
-				width: 80%;
-				max-width: 500px;
+				width: 400px;
 				margin: 2em auto;
-				padding: 0.5em;
+				padding:30px;
 				box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 			}
 			.button {
@@ -224,7 +322,6 @@
 				text-align: center;
 				text-decoration: none;
 				border-radius: 25px;
-				
 				background-color:#fffafa;
 				padding: 5px;
 				outline: none;
@@ -247,14 +344,31 @@
 			 font-size: 14px;
 			 background-color:#ffe0ed;
 			 text-align: left;
-			}			
+			}
+			
+			.my_boks {
+				position: relative;
+				width: 100%;
+				display: block;
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+			}
+			.my_boks1, .my_boks2, .my_boks3 {
+				margin: 0px;
+				padding: 10px 10px;
+				width: calc(33% - 20px);
+				display: inline-block;
+			}
+			
 		</style>
      </head>
-    <body style="overflow-x:  hidden;background-color:#f5f5f5;">
-		      
+    <body >
 	<header class="header" style="background-color:#ad0028;">
 	
+	
 	<table width=100%; >
+	
 		<tr>
 			<th style="padding-bottom:0px;">
 				<div class="line_block-header">
@@ -441,134 +555,82 @@
 		
 		<!----------------------------------------------------------------------->
 		</header>
+	
+	 <div class="container">
+       <h2 class="h2" style="padding-top:160px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
+	   
 		
-		<h2 class="h2" style="padding-top:150px;">Showing 333 White wines between 0p. - 70p. rated above 3.5 stars</h2>
-		
-		<div >
-		<div class="line_block">
-			<div style="padding-left:20px;">
-			<div  style="width:500px;">
-						<div>
-						  <table style=" width:400px;border-spacing: 5px;" >
+	   
+		   
+				<nav>
+					<div class="my_boks1" style="height:180px;width:400px;">
+						<table style=" width:400px;border-spacing: 5px;" >
 							<!-- Wine Types-->
-									<caption><h3 class="h3">Wine Types</h3></caption>
-									<tr style="color:#641c34;">
-										<td ><button class="button">Red</button></td>
-										<td><button class="button">White</button></td>
-										<td><button class="button">Sparking</button></td>
-									</tr>
-									<tr>
-										<td><button class="button">Rose</button></td>
-										<td><button class="button">Dessert</button></td>
-										<td><button class="button">Fortified</button></td>
-									</tr>
-							</table>
-						</div>	
+							<caption><h3 class="h3">Wine Types</h3></caption>
+							<tr style="color:#641c34;">
+								<td><button data-f="all" class="button" style="padding:10px;">ALL</button></td>
+								<td><button data-f="alizarin" class="text-alizarin button">Red</button></td>
+								<td><button data-f="wisteria" class="text-wisteria button">White</button></td>
+							</tr>
+							<tr>
+								<td><button data-f="emerland" class="text-emerland button">Sparking</button></td>
+								<td><button data-f="sunflower" class="text-sunflower button">Rose</button></td>
+								<td><button data-f="eggplant " class="text-eggplant button">Dessert</button></td>
+							</tr>
+						</table>
 					</div>
-			
-			<div style="padding-top:30px;">
-							<table style=" width:500px;border-spacing: 5px;">
-								<!-- Price Range-->
+					<!--<div  class="my_boks2" style="height:180px;width:440px;">
+						<table style=" width:400px;border-spacing: 5px;" >
+						<!-- Price Range
 								<caption><h3 class="h3">Grapes</h3></caption>
 									<tr>
-										<td><button class="button">Cabernet Franc</button></td>
-										<td><button class="button">Cabernet Sauvignon</button></td>
-										<td><button class="button">Chardonnay</button></td>
+										<td><button data-f="all" class="button" style="padding:10px;">ALL</button></td>
+										<td><button data-g="g1" class="button">Cabernet Franc</button></td>
+										<td><button data-g="g2" class="button">Cabernet Sauvignon</button></td>
+										<td><button data-g="g3" class="button">Chardonnay</button></td>
 									</tr>
 									<tr>
-										<td><button class="button">Grenache</button></td>
-										<td><button class="button">Maldec</button></td>
-										<td><button class="button">Merlot</button></td>
-										<td><button class="button">Pinot Noir</button></td>
+										<td><button data-g="g4" class="button">Grenache</button></td>
+										<td><button data-g="g5"class="button">Maldec</button></td>
+										<td><button data-g="g6" class="button">Merlot</button></td>
+										<td><button data-g="g7" class="button">Pinot Noir</button></td>
 									</tr>
 									<tr>
-										<td><button class="button">Riesling</button></td>
-										<td><button class="button">Sauvignon Blanc</button></td>
-										<td><button class="button">Shiraz/Syrah</button></td>
+										<td><button data-g="g8" class="button">Riesling</button></td>
+										<td><button data-g="g9" class="button">Sauvignon Blanc</button></td>
+										<td><button data-g="g10" class="button">Shiraz/Syrah</button></td>
 									</tr>
-							</table>
-						</div>
-						
-								<!-- Grapes-->
-								<!-- Food pairings-->
-						<div style="padding-top:30px;">
-							<table style=" width:500px;border-spacing: 5px;" >
-								<caption><h3 class="h3">Food pairings</h3></caption>
+						</table>
+					</div>
+					<div  class="my_boks3" style="height:180px;width:440px;">
+						<table style=" width:400px;border-spacing: 5px;" >
+							<caption><h3 class="h3">Countries</h3></caption>
 									<tr>
-										<td><button class="button">Aperitif</button></td>
-										<td><button class="button">Any junk food will do</button></td>
-										<td><button class="button">Appetizers and snacks</button></td>
-										<td><button class="button">Mushrooms</button></td>
+										<td><button data-f="all" class="button" style="padding:10px;">ALL</button></td>
+										<td><button data-c="c1" class="button">Argentina</button></td>
+										<td><button data-c="c2" class="button">Australia</button></td>
+										<td><button data-c="c3" class="button">Austria</button></td>
 									</tr>
 									<tr>
-										<td><button class="button">Beef</button></td>
-										<td><button class="button">Rich fish</button></td>
-										<td><button class="button">Blue cheese</button></td>
-										<td><button class="button">Cured Meat</button></td>
+										<td><button data-c="c4" class="button">France</button></td>
+										<td><button data-c="c5" class="button">Germany</button></td>
+										<td><button data-c="c6" class="button">Italy</button></td>
+										<td><button data-c="c7" class="button">Portugal</button></td>
 									</tr>
 									<tr>
-										<td><button class="button">Fruity dessert</button></td>
-										<td><button class="button">Game(deer, vernesion)</button></td>
-										<td><button class="button">Goat cheese</button></td>
-										<td><button class="button">Shellfish</button></td>
-									</tr>
-									<tr id="text">
-										<td><button class="button">Lamb</button></td>
-										<td><button class="button">Lean fish</button></td>
-										<td><button class="button">Mature and hard cheese</button></td>
-										<td><button class="button">Pasta</button></td>
-									</tr>
-									<tr id="text1">
-										<td><button class="button">Mild and soft cheese</button></td>
-										<td><button class="button">Pork</button></td>
-										<td><button class="button">Poultry</button></td>
-										<td><button class="button">Spicy food</button></td>
-									</tr>
-									<tr id="text2">
-										<td><button class="button">Sweet desserts</button></td>
-										<td><button class="button">Veal</button></td>
-										<td><button class="button">Vegetarian</button></td>
-									</tr>
-							</table>
-							<button id="hider"  >Shall less..</button>
-							<button id="opener">Shall all..</button>
-						</div>
-						<!-- Countries-->
-						<div style="padding-top:30px;">
-							<table style=" width:500px;border-spacing: 5px;" >
-								<caption><h3 class="h3">Countries</h3></caption>
-									<tr>
-										<td><button class="button">Argentina</button></td>
-										<td><button class="button">Australia</button></td>
-										<td><button class="button">Austria</button></td>
-										<td><button class="button">Chile</button></td>
-									</tr>
-									<tr>
-										<td><button class="button">France</button></td>
-										<td><button class="button">Germany</button></td>
-										<td><button class="button">Italy</button></td>
-										<td><button class="button">Portugal</button></td>
-									</tr>
-									<tr>
-										<td><button class="button">Spain</button></td>
-										<td><button class="button">United State</button></td>
+										<td><button data-c="c8" class="button">Chile</button></td>
+										<td><button data-c="c9" class="button">Spain</button></td>
+										<td><button data-c="c10" class="button">United State</button></td>
 										
 									</tr>
-							</table>		
-						</div>
-						<div style="padding-top:30px;">
-						<h2>Prise Range</h2>
-						<p>Какой-то вид ползунта в зависимости от того, что я придумаю</p>
-						</div>
-			</div>
-		</div> 
-		<div class="line_block">
-					<div style="padding-left:30px;">
-						<div >
-							<table style="padding-left:30px; width:800px;border-spacing: 12px ; ">
-								<tr style="background-color:#fff5f7;">
-								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2012&price_id=23403923 -->
-									<th class="boxShadow8">
+						</table>
+					</div>-->
+				</nav>
+		
+			
+	
+        <div class="block-cover" style="padding-top:25px;">
+            <div class=" col-auto box alizarin " style="background-color:#fff5f7;">
 										<div class="line_block">
 										
 											<div>
@@ -613,13 +675,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-						
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/podere-san-cristoforo-amaranto-sangiovese/w/1291326?year=2018&price_id=22357821 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box alizarin " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -663,12 +721,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/bodegas-arzuaga-navarro-sl-ribera-del-duero-crianza/w/7932?year=2017&price_id=22357614 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box alizarin " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -712,12 +767,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/mar-de-frades-rias-baixas-albarino/w/1143504?year=2019&price_id=22357932 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box wisteria" style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -761,12 +813,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!-- https://www.vivino.com/la-rioja-alta-vina-alberdi-reserva/w/7976?year=2015&price_id=22355672-->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box alizarin" style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -810,12 +859,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!-- https://www.vivino.com/pago-de-los-capellanes-crianza-tinto/w/16226?year=2017&price_id=22356154-->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box emerland  " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -859,12 +905,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/es-de-muller-legitim-crianza/w/1210435?year=2017&price_id=22357413 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box alizarin " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -908,12 +951,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/claudie-jobard-rully-montagne-la-folie/w/1219862?year=2018&price_id=23917702 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box wisteria " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -957,12 +997,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/jorge-ordonez-and-co-no-2-victoria/w/1285845?year=2017&price_id=22356826 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box eggplant " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1006,12 +1043,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/compania-de-vinos-trico-nicolas-albarino/w/1634161?year=2015&price_id=22356711 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box wisteria " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1055,12 +1089,9 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/venus-la-universal-dido-la-solucio-rosa/w/5479963?year=2018&price_id=22357252 -->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box sunflower  " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1104,19 +1135,16 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!-- https://www.vivino.com/la-vicalanda-reserva/w/1126221?year=2014&price_id=22356601-->
-									<th class="boxShadow8">
-										<div class="line_block">
+			</div>
+            <div class="col-auto box alizarin " style="background-color:#fff5f7;">
+				<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
 													<tr>
 														<th style="width:150px;height:220px;">
 																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/dxOFUGx_TimjeOmrMPZYBA_pb_x600.png"></a>
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/rTKVzbP1TFWaGLuWFR6RBg_pb_x600.png"></a>
 																</div>
 														</th>
 														
@@ -1125,26 +1153,26 @@
 											</div>
 										</div>
 										<div class="info-vine" >
-											<p>La Vicalanda</p>
-											<p>Reserva 2014</p>
-											<p>Red wine from Rioja Spain</p>
+											<p>De Muller</p>
+											<p>Legítim Crianza 2017</p>
+											<p>Red wine from Priorat Spain</p>
 										</div>
 										<table style="padding-left:10px;">
 											<tr>
 												<th>
-													<p>3</p>
+													<p>1</p>
 												</th>
 												<th>
 													<div class="rating">
-														<input type="radio" id="star12-5"  value="5">
+														<input type="radio" id="star7-5"  value="5">
 														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star12-4"  value="4">
+														<input type="radio" id="star7-4"  value="4">
 														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star12-3"  value="3">
+														<input type="radio" id="star7-3"  value="3">
 														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star12-2"  value="2">
+														<input type="radio" id="star7-2"  value="2">
 														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star12-1"  value="1">
+														<input type="radio" id="star7-1"  value="1">
 														<label title="Оценка «1»"></label>
 													</div>
 												</th>
@@ -1153,77 +1181,46 @@
 										<div style="padding-top:50px;">
 										<button class="button">View shops</button>
 										</div>
-									</th>
-								</tr>
-								<tr style="background-color:#fff5f7;padding-top:20px;">
-								<!--https://www.vivino.com/la-rioja-alta-vina-ardanza-reserva/w/7973?year=2010&price_id=23538257 -->
-									<th class="boxShadow8">
-										<div class="line_block">
-										
-											<div>
-												<table style="background-color:#a0a0a4;border-radius: 5px;">
-													<tr>
-														<th style="width:150px;height:220px;">
-																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/2UwsjWzESdGurxw2w54SHA_pb_x600.png"></a>
-																</div>
-														</th>
-														
-													</tr>
-												</table>
-											</div>
-										</div>
-										<div class="info-vine" >
-											<p>La Rioja Alta</p>
-											<p>Viña Ardanza Reserva 2010</p>
-											<p>Red wine from Rioja Spain</p>
-										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>4</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star13-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star13-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star13-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star13-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star13-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
-										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
-										</div>
-									</th>
-								</tr>
-							</table>
-						</div>
-					</div>
-		    </div> 
+			</div>
+        
 		</div>
-		<script>
-    // Здесь не важно, как мы скрываем текст.
-    // Также можно использовать style.display: 
-    document.getElementById('hider').onclick = function() {
-      document.getElementById('text').hidden = true;
-	  document.getElementById('text1').hidden = true;
-	  document.getElementById('text2').hidden = true;
-	  document.getElementById('opener').hidden = false;
-    }
-	 document.getElementById('opener').onclick = function() {
-      document.getElementById('text').hidden = false;
-	  document.getElementById('text1').hidden = false;
-	  document.getElementById('text2').hidden = false;
-	  document.getElementById('hider').hidden = false;
-    }
-  </script>
+           
+	<script>
+		const filterBox = document.querySelectorAll('.box');
+		//const filterBox1 = document.querySelectorAll('.box1');
+		//const filterBox2 = document.querySelectorAll('.box2');
+		
+		document.querySelector('nav').addEventListener('click', (event) => {
+
+			if (event.target.tagName !== 'BUTTON') return false;
+			let filterClass = event.target.dataset['f'];
+			//let filterClassGrapes = event.target.dataset['g'];
+			//let filterClassCountry = event.target.dataset['c'];
+
+			filterBox.forEach(elem => {
+				elem.classList.remove('hide');
+				if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+					elem.classList.add('hide');
+				}
+			});
+			
+			//filterBox1.forEach(elem => {
+			//	elem.classList.remove('hide');
+			//	if (!elem.classList.contains(filterClassGrapes) && filterClassGrapes !== 'all') {
+			//		elem.classList.add('hide');
+			//	}
+			//});
+			
+			//filterBox2.forEach(elem => {
+			//	elem.classList.remove('hide');
+			//	if (!elem.classList.contains(filterClassCountry) && filterClassCountry !== 'all') {
+			//		elem.classList.add('hide');
+			//	}
+			//});
+			
+		});
+		
+		
+	</script>
 	</body>
 </html>

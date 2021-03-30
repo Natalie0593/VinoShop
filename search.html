@@ -344,22 +344,9 @@
 			 background-color:#ffe0ed;
 			 text-align: left;
 			}
-			
-			.my_boks {
-				position: relative;
-				width: 100%;
-				display: block;
-				margin: 0 auto;
-				padding: 0;
-				text-align: center;
+			li {
+				list-style-type: none; /* Убираем маркеры */
 			}
-			.my_boks1, .my_boks2, .my_boks3 {
-				margin: 0px;
-				padding: 10px 10px;
-				width: calc(33% - 20px);
-				display: inline-block;
-			}
-			
 		</style>
      </head>
     <body >
@@ -378,7 +365,7 @@
 							</th>
 							<th >
 								<form style="padding-left:10px;">
-									<input type="text" name="search" placeholder="Search..">
+									<input type="text" name="search" placeholder="Search.." id="filter-input">
 								</form>
 							</th>
 							<th>
@@ -569,195 +556,206 @@
 			</nav>
 		
 			
-	
-        <div class="block-cover" style="padding-top:25px;">
-            <div class=" col-auto box alizarin " style="background-color:#fff5f7;">
-										<div class="line_block">
-										
-											<div>
-												<table style="background-color:#a0a0a4;border-radius: 5px;">
-													<tr>
-														<th style="width:150px;height:220px;">
-																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px;" alt="" src="https://images.vivino.com/thumbs/CbjCX1G9QOawd5UDGNy7sg_pb_x600.png"></a>
-																</div>
-														</th>
-														
-													</tr>
-												</table>
-											</div>
-										</div>
-										<div class="info-vine" >
-											<p>La Rioja Alta</p>
-											<p>Viña Ardanza Reserva 2012</p>
-											<p>Red wine from Rioja Spain</p>
-										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>3</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star1-5"  value="5">
-														<label title="Оценка «5»"></label>	
-														<input type="radio" id="star1-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star1-3"  value="3">
-														<label  title="Оценка «3»"></label>  
-														<input type="radio" id="star1-2"  value="2">
-														<label  title="Оценка «2»"></label>    
-														<input type="radio" id="star1-1"  value="1">
-														<label  title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
-										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
-										</div>
-			</div>
-
-            <div class="col-auto box wisteria box1 g1 box2 c1" style="background-color:#fff5f7;">
+	<div id="filter-list">
+		<li>
+			<div class="col-auto box alizarin" style="background-color:#fff5f7;">
 				<div class="line_block">
-										
-											<div>
-												<table style="background-color:#a0a0a4;border-radius: 5px;">
-													<tr>
-														<th style="width:150px;height:220px;">
-																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/-Gxa1jPjTm64ld15fKZh6g_pb_x600.png"></a>
-																</div>
-														</th>
-														
-													</tr>
-												</table>
-											</div>
+					<div>
+						<table style="background-color:#a0a0a4;border-radius: 5px;">
+							<tr>
+								<th style="width:150px;height:220px;">
+									<div >
+										<a href="" target="_blank"><img style="width:60px;height:220px;" alt="" src="https://images.vivino.com/thumbs/CbjCX1G9QOawd5UDGNy7sg_pb_x600.png"></a>
+									</div>
+								</th>
+																					
+							</tr>
+						</table>
+					</div>
+						</div>
+							<div class="info-vine"  >
+								<p>La Rioja Alta</p>
+								<p>Viña Ardanza Reserva 2012</p>
+							    <p>Red wine from Rioja Spain</p>
+							</div>
+							<table style="padding-left:10px;">
+								<tr>
+									<th>
+										<p>3</p>
+									</th>
+									<th>
+										<div class="rating">
+											<input type="radio" id="star1-5"  value="5">
+											<label title="Оценка «5»"></label>	
+											<input type="radio" id="star1-4"  value="4">
+											<label  title="Оценка «4»"></label>    
+											<input type="radio" id="star1-3"  value="3">
+											<label  title="Оценка «3»"></label>  
+											<input type="radio" id="star1-2"  value="2">
+											<label  title="Оценка «2»"></label>    
+											<input type="radio" id="star1-1"  value="1">
+											<label  title="Оценка «1»"></label>
 										</div>
-										<div class="info-vine" >
-											<p>Podere San Cristoforo</p>
-											<p>Amaranto Sangiovese 2018</p>
-											<p>Red wine from Maremma Toscana Italy</p>
-										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>4</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star2-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star2-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star2-3"  value="3">
-														<label  title="Оценка «3»"></label>  
-														<input type="radio" id="star2-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star2-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
-										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
-										</div>
+									</th>
+								</tr>
+							</table>
+							<div style="padding-top:50px;">
+								<button class="btn1">View shops</button>
+							</div>		
+							
 			</div>
-            <div class="col-auto box eggplant box1 g2 box2 c2" style="background-color:#fff5f7;">
+		</li>
+	</div>
+	<div id="filter-list">
+		<li>
+			<div class="col-auto box wisteria" style="background-color:#fff5f7;">
 				<div class="line_block">
-										
+							<div>
+								<table style="background-color:#a0a0a4;border-radius: 5px;">
+									<tr>
+										<th style="width:150px;height:220px;">
 											<div>
-												<table style="background-color:#a0a0a4;border-radius: 5px;">
-													<tr>
-														<th style="width:150px;height:220px;">
-																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/u_K6vdDZTp2yCKPyw4JO5g_pb_x600.png"></a>
-																</div>
-														</th>
-														
-													</tr>
-												</table>
+												<a href="" target="_blank">
+												<img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/-Gxa1jPjTm64ld15fKZh6g_pb_x600.png"/>
 											</div>
-										</div>
-										<div class="info-vine" >
-											<p>Arzuaga</p>
-											<p>Ribera del Duero Crianza 2017</p>
-											<p>Red wine from Ribera del Duero Spain</p>
-										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>2</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star3-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star3-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star3-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star3-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star3-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
-										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
-										</div>
-			</div>
-            <div class="col-auto box belizehole box1 g2 box2 c3 " style="background-color:#fff5f7;">
-				<div class="line_block">
-										
-											<div>
-												<table style="background-color:#a0a0a4;border-radius: 5px;">
-													<tr>
-														<th style="width:150px;height:220px;">
-																<div >
-																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/xmoeIltaTqqdHviQ2MM8rw_pb_x600.png"></a>
-																</div>
-														</th>
-														
-													</tr>
-												</table>
+										</th>
+									</tr>
+								</table>
+							</div>
+						</div>
+							<div class="info-vine">
+								<p>Podere San Cristoforo</p>
+								<p>Amaranto Sangiovese 2018</p>
+								<p>Red wine from Maremma Toscana Italy</p>
+							</div>
+						<table style="padding-left:10px;">
+							<tr>
+								<th>
+									<p>4</p>
+								</th>
+								<th>
+									<div class="rating">
+										<input type="radio" id="star1-5"  value="5">
+										<label title="Оценка «5»"></label>	
+										<input type="radio" id="star1-4"  value="4">
+										<label  title="Оценка «4»"></label>    
+										<input type="radio" id="star1-3"  value="3">
+										<label  title="Оценка «3»"></label>  
+										<input type="radio" id="star1-2"  value="2">
+										<label  title="Оценка «2»"></label>    
+										<input type="radio" id="star1-1"  value="1">
+										<label  title="Оценка «1»"></label>
+									</div>
+								</th>
+							</tr>
+						</table>
+						<div style="padding-top:50px;">
+							<button class="btn1">View shops</button>
+						</div>	
+				
+		  </div>
+		</li>
+	</div>
+	<div id="filter-list">
+		<li>
+			<div class="col-auto box eggplant">
+			<div class="line_block">
+							<div>
+								<table style="background-color:#a0a0a4;border-radius: 5px;">
+									<tr>
+										<th style="width:150px;height:220px;">
+											<div >
+												<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/u_K6vdDZTp2yCKPyw4JO5g_pb_x600.png"></a>
 											</div>
-										</div>
-										<div class="info-vine" >
-											<p>Mar de Frades</p>
-											<p>Rías Baixas Albariño 2019</p>
-											<p>White wine from Rías Baixas Spain</p>
-										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>5</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star4-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star4-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star4-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star4-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star4-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
-										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
-										</div>
-			</div>
-            <div class="col-auto box sunflower box1 g6 box2 c3" style="background-color:#fff5f7;">
-				<div class="line_block">
+										</th>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="info-vine" >
+							<p>Arzuaga</p>
+							<p>Ribera del Duero Crianza 2017</p>
+							<p>Red wine from Ribera del Duero Spain</p>
+						</div>
+						<table style="padding-left:10px;">
+							<tr>
+								<th>
+									<p>2</p>
+								</th>
+								<th>
+									<div class="rating">
+										<input type="radio" id="star1-5"  value="5">
+										<label title="Оценка «5»"></label>	
+										<input type="radio" id="star1-4"  value="4">
+										<label  title="Оценка «4»"></label>    
+										<input type="radio" id="star1-3"  value="3">
+										<label  title="Оценка «3»"></label>  
+										<input type="radio" id="star1-2"  value="2">
+										<label  title="Оценка «2»"></label>    
+										<input type="radio" id="star1-1"  value="1">
+										<label  title="Оценка «1»"></label>
+									</div>
+								</th>
+							</tr>
+						</table>
+						<div style="padding-top:50px;">
+							<button class="btn1">View shops</button>
+						</div>
+		</div>
+		</li>
+	</div>
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box belizehole">
+			<div class="line_block">
+							<div>
+								<table style="background-color:#a0a0a4;border-radius: 5px;">
+									<tr>
+										<th style="width:150px;height:220px;">
+											<div >
+												<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/xmoeIltaTqqdHviQ2MM8rw_pb_x600.png"></a>
+											</div>
+										</th>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="info-vine" >
+							<p>Mar de Frades</p>
+							<p>Rías Baixas Albariño 2019</p>
+							<p>White wine from Rías Baixas Spain</p>
+						</div>
+						<table style="padding-left:10px;">
+							<tr>
+								<th>
+									<p>5</p>
+								</th>
+								<th>
+									<div class="rating">
+										<input type="radio" id="star1-5"  value="5">
+										<label title="Оценка «5»"></label>	
+										<input type="radio" id="star1-4"  value="4">
+										<label  title="Оценка «4»"></label>    
+										<input type="radio" id="star1-3"  value="3">
+										<label  title="Оценка «3»"></label>  
+										<input type="radio" id="star1-2"  value="2">
+										<label  title="Оценка «2»"></label>    
+										<input type="radio" id="star1-1"  value="1">
+										<label  title="Оценка «1»"></label>
+									</div>
+								</th>
+							</tr>
+						</table>
+						<div style="padding-top:50px;">
+							<button class="btn1">View shops</button>
+						</div>
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box sunflower">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -799,11 +797,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box alizarin box1 g10 box2 c8" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box alizarin">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -845,11 +847,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box wisteria box1 g6 box2 c7" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box wisteria">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -891,11 +897,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box eggplant box1 g5 box2 c6" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box eggplant">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -937,11 +947,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box belizehole box1 g3 box2 c3" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box belizehole">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -983,11 +997,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box sunflower box1 g7 box2 c4" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box sunflower">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1029,11 +1047,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box alizarin box1 g8 box2 c5" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		 <div class="col-auto box alizarin">
+			<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1075,11 +1097,15 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-            <div class="col-auto box wisteria box1 g9 box2 c1" style="background-color:#fff5f7;">
-				<div class="line_block">
+		</div>
+		</li>
+	</div>	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box wisteria">
+		<div class="line_block">
 										
 											<div>
 												<table style="background-color:#a0a0a4;border-radius: 5px;">
@@ -1121,16 +1147,16 @@
 											</tr>
 										</table>
 										<div style="padding-top:50px;">
-										<button class="button">View shops</button>
+										<button class="btn1">View shops</button>
 										</div>
-			</div>
-        
 		</div>
-           
+		</li>
+	</div>
+	
+		
+</div>
 	<script>
 		const filterBox = document.querySelectorAll('.box');
-		const filterBox1 = document.querySelectorAll('.box1');
-		const filterBox2 = document.querySelectorAll('.box2');
 		
 		document.querySelector('nav').addEventListener('click', (event) => {
 
@@ -1148,6 +1174,32 @@
 			
 		});
 		
+		
+let filter = function () {
+		let input = document.getElementById('filter-input');
+
+		input.addEventListener('keyup', function () {
+        let filter = input.value.toLowerCase(),
+            filterElements = document.querySelectorAll('#filter-list li');
+
+        filterElements.forEach(item => {
+	
+            if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
+			
+                item.style.display = ''; //весь блок покаать
+				
+            } else {
+				
+                item.style.display = 'none'; // весь блок скрыть
+					
+            }
+        })
+
+    })
+
+};
+
+filter();
 		
 	</script>
 	</body>
