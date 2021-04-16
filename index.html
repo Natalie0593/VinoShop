@@ -1,43 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<link rel="stylesheet" href="css/index.css" type="text/css"/>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
+
+		<link rel="stylesheet" href="index.css" type="text/css">
+		<link rel="stylesheet" href="css/stars.css" type="text/css">
+		
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://rawgit.com/kartik-v/bootstrap-star-rating/v3.5.4/js/star-rating.js"></script>
 		<style>
+			.h2{
+				font-size: 30px;
+				color: #605833; font-family: Georgia, arial, serif;
+				margin-left: 60px;
+				padding-top:60px;
+			}
+			.h3{
+				color: #605833;
+				font-family: Enriqueta;
+				font-size: 20px;
+				margin-left: 60px;
+			}
+	
+			
+			.line_block {  
+				float:left; 
+				text-align:center;
+			}
+	
+			.table{
+				text-align: left;
+			}
+			.link {
+			   color: #fff;
+			   border-radius: 3px;
+			   text-decoration: none;
+			   text-align:center;
+			}
+						
+			.img{
+			width: 125px; 
+			height: 450px;
+			margin-left:50px;
+			margin-top:100px
+			}
+			.txt {
+            border: 1px solid red;
+            padding: 20px;
+			}
+			
+			.line_block_header {  
+			float:left; 
+			padding-top:20px;
+			text-align:center;
+			}
+		
+			.table-left{
+				text-align: left;
+			}
+			.link {
+			   color: #fff;
+			   border-radius: 3px;
+			   text-decoration: none;
+			   text-align:center;
+			}
+			.line_block-header {  
+			float:left; 
+			text-align:center;
+			}
+			<!-------------------------------------------->
+			.dropdown {
+				float: left;
+				overflow: hidden;
+			}
+
+			.dropdown .dropbtn {
+				font-size: 16px;    
+				border: none;
+				outline: none;
+				color: white;
+				padding: 14px 16px;
+				background-color: inherit;
+				font-family: inherit;
+				margin: 0;
+			}
+
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				width:450px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a {
+				float: none;
+				color: black;
+				padding: 8px 4px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+				font-family: Georgia, arial, serif;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #ddd;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			.image_btn{
+				background-image: url('img/vino.ico');
+				background-size: 20px 20px;
+				background-position: 10px 10px; 
+				background-repeat: no-repeat;
+				padding: 15px;
+				transition: width 0.4s ease-in-out;
+				}
+				.image_btn2{
+			background-image: url('img/grapes.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.image_btn3{
+			background-image: url('img/pairings.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.animated-show {
+			  opacity: 0;
+			  transition: opacity 2s ease-out;
+			}
+			.animated-show.animated-show-active {
+			  opacity: 1;
+			}
 		</style>
     </head>
-    <body>
-	<header class="header" style="background-color:#ad0028;">
+
+    <body style="height:500px;">
+
+		<header class="header" style="background-color:#ad0028;padding-top:20px;">
 	
-	<table >
-		<tr>
-			<th style="padding-bottom:0px;">
-				<div class="line_block">
-					<table>
-						<tr>
-							<th>
-								<a href="index.html" style="text-decoration: none;" target="_blank"><p class="name-cite" style="padding-left:250px;">Vivino</p></a>
-							</th>
-							<th >
-								<form style="padding-left:10px;">
-									<input type="text" name="search" placeholder="Search..">
-								</form>
-							</th>
-							<th>
-								<a href="login.html" style="padding-left:600px;" class="link" data-modal="delivery">Sing in</a>
-							</th>
-							<th>
-								<a href="register.html" style="padding-left:20px;" class="link" data-modal="delivery">Sing up</a>
-							</th>
-						</tr>
-					</table>
-				</div>
-			</th>
-		</tr>
+	
+			<table width=100%; id="body">
+		
+				<tr >
+					<th>
+						<div class="line_block-header">
+							<table>
+								<tr>
+									<th>
+										<a href="index.html" style="text-decoration: none;" target="_blank"><p class="name-cite" style="padding-left:250px;">Vivino</p></a>
+									</th>
+									<th >
+										<form class="animated-show animated-show-active" style="padding-left:10px;" >
+											<a href="search.html"><input type="text" name="search" placeholder="Search.." id="filter-input"></a>
+										</form>
+									</th>
+									<th>
+										<a href="login.html" style="padding-left:600px;" class="link" data-modal="delivery">Sing in</a>
+									</th>
+									<th>
+										<a href="register.html" style="padding-left:20px;" class="link" data-modal="delivery">Sing up</a>
+									</th>
+								</tr>
+							</table>
+						</div>
+					</th>
+				</tr>
 				<tr>
 					<th style="padding-top:0px;">
-						<div class="navbar" >
+						<table>
+						<tr>
+						<th>
 							<div class="dropdown" style="padding-left:70px;">
 								<table>
 									<tr>
@@ -45,153 +194,178 @@
 											<img class="image_btn">
 										</th>
 										<th>
-											<button class="dropbtn "> Types of wines 
-												<i class="fa fa-caret-down"></i>
-											</button>
+											<p class="dropbtn"> Types of wines</p>
 										</th>
 									</tr>
 								</table>
-								<div class="dropdown-content">
-									<div class="line_block" >
+						<div class="dropdown-content">
+								<table>
+									<tr>
+									<th>
 										<div style="padding-left:20px;">
-											<a href="#">Red</a>
-											<table class="table">
+											<a href="search.html">Red</a>
+											<table class="table-left">
 												<tr><td style="padding-top:10px;">Tuscan Red</td></tr>
 												<tr><td style="padding-top:10px;">Spanish Rioja Red</td></tr>
 												<tr><td style="padding-top:10px;">South African Pinotage</td></tr>
 												<tr><td style="padding-top:10px;">Italian Amarone</td></tr>
 											</table>
 										</div>
-									</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<a href="#">White</a>
-									<table class="table">
-										<tr><td style="padding-top:10px;">German Riesling</td></tr>
-										<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
-										<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
-										<tr><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
-									</table>
-								</div>
-							</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-								<!--Sparkling Rosé Port Dessert-->
-								<a href="#">Sparkling</a>
-								<a href="#">Rosé</a>
-								<a href="#">Port</a>
-								<a href="#">Dessert</a>
-								</div>
-							</div>
+									</th>
+									<th>
+									
+										<div style="padding-left:20px;">
+											<a href="search.html">White</a>
+											<table class="table-left">
+												<tr><td style="padding-top:10px;">German Riesling</td></tr>
+												<tr><td style="padding-top:10px;">Northern Italy White</td></tr>
+												<tr><td style="padding-top:10px;">German Grauburgunder</td></tr>
+												<tr><td style="padding-top:10px;">New Zealand Sauvignon Blanc</td></tr>
+											</table>
+										</div>
+							</th>
+							<th>
+							
+										<div style="padding-left:20px;">
+										<!--Sparkling Rosé Port Dessert-->
+										<a href="search.html">Sparkling</a>
+										<a href="search.html">Rosé</a>
+										<a href="search.html">Port</a>
+										<a href="search.html">Dessert</a>
+										</div>
+							</th>
+							</tr>
+							</table> 
 						</div>
+					
 					</div> 
-					<div class="dropdown" style="padding-left:40px;">
-						<table>
-								<tr>
-									<th>
-										<img class="image_btn2">
-									</th>
-									<th>
-										<button class="dropbtn ">Grapes 
-											<i class="fa fa-caret-down"></i>
-										</button>
-									</th>
-								</tr>
-						</table>
+						</th>
+						<th>
+							<div class="dropdown" style="padding-left:70px;">
+								<table>
+									<tr>
+										<th>
+											<img class="image_btn2">
+										</th>
+										<th>
+											<p class="dropbtn">Grapes</p>
+										</th>
+									</tr>
+								</table>
 						<div class="dropdown-content">
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Cabernet Sauvignon</td></tr>
-										<tr><td style="padding-top:10px;">Montepulciano</td></tr>
-										<tr><td style="padding-top:10px;">Chardonnay</td></tr>
-										<tr><td style="padding-top:10px;">Pinot Noir</td></tr>
-										<tr><td style="padding-top:10px;">Malbec</td></tr>
-									</table>
-								</div>
-							</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Sauvignon Blanc</td></tr>
-										<tr><td style="padding-top:10px;">Shiraz/Syrah</td></tr>
-										<tr><td style="padding-top:10px;">Zinfandel</td></tr>
-										<tr><td style="padding-top:10px;">Nebbiolo</td></tr>
-										<tr><td style="padding-top:10px;">Sangiovese</td></tr>
-									</table>
-								</div>
-							</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Pinot Grigio</td></tr>
-										<tr><td style="padding-top:10px;">Riesling</td></tr>
-										<tr><td style="padding-top:10px;">Grauburgunder</td></tr>
-										<tr><td style="padding-top:10px;">Tempranillo</td></tr>
-										<tr><td style="padding-top:10px;">Primitivo</td></tr>
-									</table>
-								</div>
-							</div>
+								<table>
+									<tr>
+									<th>
+										<div style="padding-left:20px;">
+									
+											<table class="table-left">
+												<tr><td style="padding-top:10px;"><a href="search.html">Cabernet Sauvignon</a></td></tr>
+												<tr><td><a href="search.html">Montepulciano</a></td></tr>
+												<tr><td><a href="search.html">Chardonnay</a></td></tr>
+												<tr><td><a href="search.html">Pinot Noir</a></td></tr>
+												<tr><td><a href="search.html">Malbec</a></td></tr>
+											</table>
+										</div>
+									</th>
+									<th>
+									
+										<div style="padding-left:20px;">
+											<table class="table-left">
+												<tr><td style="padding-top:10px;"><a href="search.html">Sauvignon Blanc</a></td></tr>
+												<tr><td><a href="search.html">Shiraz/Syrah</a></td></tr>
+												<tr><td><a href="search.html">Zinfandel</a></td></tr>
+												<tr><td><a href="search.html">Nebbiolo</a></td></tr>
+												<tr><td><a href="search.html">Sangiovese</a></td></tr>
+											</table>
+										</div>
+							</th>
+							<th>
+							
+										<div style="padding-left:20px;">
+										<table class="table-left">
+											<tr><td><a href="search.html">Pinot Grigio</a></td></tr>
+											<tr><td><a href="search.html">Riesling</a></td></tr>
+											<tr><td><a href="search.html">Grauburgunder</a></td></tr>
+											<tr><td><a href="search.html">Tempranillo</a></td></tr>
+											<tr><td><a href="search.html">Primitivo</a></td></tr>
+										</table>
+										</div>
+							</th>
+							</tr>
+							</table> 
 						</div>
+					
 					</div> 
-					<div class="dropdown" style="padding-left:40px;">
-						<table>
-								<tr>
-									<th>
-										<img class="image_btn3">
-									</th>
-									<th>
-										<button class="dropbtn ">Pairigs 
-											<i class="fa fa-caret-down"></i>
-										</button>
-									</th>
-								</tr>
-						</table>
+						</th>
+						<th>
+							<div class="dropdown" style="padding-left:70px;">
+								<table>
+									<tr>
+										<th>
+											<img class="image_btn3">
+										</th>
+										<th>
+											<p class="dropbtn">Pairigs</p>
+										</th>
+									</tr>
+								</table>
 						<div class="dropdown-content">
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Beef</td></tr>
-										<tr><td style="padding-top:10px;">Lamb</td></tr>
-										<tr><td style="padding-top:10px;">Veal</td></tr>
-										<tr><td style="padding-top:10px;">Pork</td></tr>
-										<tr><td style="padding-top:10px;">Game (deer, venison)</td></tr>
-										<tr><td style="padding-top:10px;">Poultry</td></tr>
-										<tr><td style="padding-top:10px;">Mushrooms</td></tr>
-									</table>
-								</div>
-							</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Cured meat</td></tr>
-										<tr><td style="padding-top:10px;">Goat Cheese</td></tr>
-										<tr><td style="padding-top:10px;">Mature and hard cheese</td></tr>
-										<tr><td style="padding-top:10px;">Mild and soft cheese</td></tr>
-										<tr><td style="padding-top:10px;">Pasta</td></tr>
-										<tr><td style="padding-top:10px;">Spicy food</td></tr>
-									</table>
-								</div>
-							</div>
-							<div class="line_block">
-								<div style="padding-left:20px;">
-									<table class="table">
-										<tr><td style="padding-top:10px;">Aperitif</td></tr>
-										<tr><td style="padding-top:10px;">Appetizers and snacks</td></tr>
-										<tr><td style="padding-top:10px;">Lean fish</td></tr>
-										<tr><td style="padding-top:10px;">Rich fish(Salmon, tuna etc)</td></tr>
-										<tr><td style="padding-top:10px;">Shellfish</td></tr>
-										<tr><td style="padding-top:10px;">Vegetarian</td></tr>
-									</table>
-								</div>
-							</div>
+								<table>
+									<tr>
+									<th>
+										<div style="padding-left:20px;">
+											<table class="table-left">
+												<tr><td><a href="search.html">Beef</a></td></tr>
+												<tr><td><a href="search.html">Lamb</a></td></tr>
+												<tr><td><a href="search.html">Veal</a></td></tr>
+												<tr><td><a href="search.html">Pork</a></td></tr>
+												<tr><td><a href="search.html">Game (deer, venison)</a></td></tr>
+												<tr><td><a href="search.html">Poultry</a></td></tr>
+												<tr><td><a href="search.html">Mushrooms</a></td></tr>
+											</table>
+										</div>
+									</th>
+									<th>
+									
+										<div style="padding-left:20px;">
+											<table class="table-left">
+												<tr><td><a href="search.html">Cured meat</a></td></tr>
+												<tr><td><a href="search.html">Goat Cheese</a></td></tr>
+												<tr><td><a href="search.html">Mature and hard cheese</a></td></tr>
+												<tr><td><a href="search.html">Mild and soft cheese</a></td></tr>
+												<tr><td><a href="search.html">Pasta</a></td></tr>
+												<tr><td><a href="search.html">Spicy food</a></td></tr>
+											</table>
+										</div>
+							</th>
+							<th>
+							
+										<div style="padding-left:20px;">
+										<table class="table-left">
+											<tr><td><a href="search.html">Aperitif</a></td></tr>
+											<tr><td><a href="search.html">Appetizers and snacks</a></td></tr>
+											<tr><td><a href="search.html">Lean fish</a></td></tr>
+											<tr><td><a href="search.html">Rich fish(Salmon, tuna etc)</a></td></tr>
+											<tr><td><a href="search.html">Shellfish</a></td></tr>
+											<tr><td><a href="search.html">Vegetarian</a></td></tr>
+										</table>
+										</div>
+							</th>
+							</tr>
+							</table> 
 						</div>
+					
 					</div> 
-				</div>
-			</th>
-		</tr>
-	</table>
-
+						</th>
+						</tr>
+					</th>
+				</tr>
+		</table>
+		
+		
+		<!----------------------------------------------------------------------->
+		
+		<!----------------------------------------------------------------------->
 		</header>
 	
 		<div >
@@ -202,8 +376,8 @@
 		<br><br>
 		<div class="slideshow-container">
 
-			<div class="mySlides fade" ">
-				<div class="container" style="margin-left:30px;" >
+			<div class="mySlides fade_wine">
+				<div class="container_wine" style="padding-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -211,22 +385,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/NGm0uvnWSAiFGCtcA-GcCw_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>3</p>
-												<div class="rating">
-													<input type="radio" id="star1-5"  value="5">
-													<label for="star1-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star1-4"  value="4">
-													<label for="star1-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star1-3"  value="3">
-													<label for="star1-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star1-2"  value="2">
-													<label for="star1-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star1-1"  value="1">
-													<label for="star1-1" title="Оценка «1»"></label>
+												<form id="fld">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2">
+													<input id="question3">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -239,7 +409,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -247,22 +417,18 @@
 									<a href="vino_2.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/7z-dy1wwRmKdGNzBcCEEwQ_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>2</p>
-												<div class="rating">
-													<input type="radio" id="star2-5"  value="5">
-													<label for="star2-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star2-4"  value="4">
-													<label for="star2-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star2-3"  value="3">
-													<label for="star2-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star2-2"  value="2">
-													<label for="star2-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star2-1"  value="1">
-													<label for="star2-1" title="Оценка «1»"></label>
+												<form id="fld1">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d1'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -275,7 +441,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -283,22 +449,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/d95_Rl_UReeoMmvPpx5axA_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>4</p>
-												<div class="rating">
-													<input type="radio" id="star3-5"  value="5">
-													<label for="star3-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star3-4"  value="4">
-													<label for="star3-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star3-3"  value="3">
-													<label for="star3-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star3-2"  value="2">
-													<label for="star3-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star3-1"  value="1">
-													<label for="star3-1" title="Оценка «1»"></label>
+												<form id="fld2">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d2'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -310,7 +472,7 @@
 					
 					</div>
 				</div>
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -318,22 +480,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/3Z1TuDHgQ_GnqTAP1-DJzg_pb_x600.png" alt=""></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>5</p>
-												<div class="rating">
-													<input type="radio" id="star4-5"  value="5">
-													<label for="star4-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star4-4"  value="4">
-													<label for="star4-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star4-3"  value="3">
-													<label for="star4-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star4-2"  value="2">
-													<label for="star4-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star4-1"  value="1">
-													<label for="star4-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -348,8 +506,8 @@
 							
 			</div>
 
-			<div class="mySlides fade" >
-				<div class="container" style="margin-left:30px;" >
+			<div class="mySlides fade_wine" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -357,22 +515,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/Q85GabEBRMufAZEZ_nVA8Q_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>3</p>
-												<div class="rating">
-													<input type="radio" id="star1-5"  value="5">
-													<label for="star1-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star1-4"  value="4">
-													<label for="star1-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star1-3"  value="3">
-													<label for="star1-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star1-2"  value="2">
-													<label for="star1-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star1-1"  value="1">
-													<label for="star1-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -385,7 +539,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -393,22 +547,18 @@
 									<a href="vino_2.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/h2X6n5HVS1GrJjk6MPm0Wg_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>2</p>
-												<div class="rating">
-													<input type="radio" id="star2-5"  value="5">
-													<label for="star2-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star2-4"  value="4">
-													<label for="star2-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star2-3"  value="3">
-													<label for="star2-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star2-2"  value="2">
-													<label for="star2-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star2-1"  value="1">
-													<label for="star2-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -421,7 +571,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -429,22 +579,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/wIwOGBvOSi2LE6mK2K9afg_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>4</p>
-												<div class="rating">
-													<input type="radio" id="star3-5"  value="5">
-													<label for="star3-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star3-4"  value="4">
-													<label for="star3-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star3-3"  value="3">
-													<label for="star3-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star3-2"  value="2">
-													<label for="star3-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star3-1"  value="1">
-													<label for="star3-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -456,7 +602,7 @@
 					
 					</div>
 				</div>
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -464,22 +610,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/gLAVSoUxT4ibbf9Ht90Ebw_pb_x600.png" alt=""></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>5</p>
-												<div class="rating">
-													<input type="radio" id="star4-5"  value="5">
-													<label for="star4-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star4-4"  value="4">
-													<label for="star4-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star4-3"  value="3">
-													<label for="star4-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star4-2"  value="2">
-													<label for="star4-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star4-1"  value="1">
-													<label for="star4-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -494,8 +636,8 @@
 							
 			</div>
 
-				<div class="mySlides fade" >
-				<div class="container" style="margin-left:30px;" >
+				<div class="mySlides fade_wine" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -503,22 +645,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/LboARW12QBuaAZtvxati2w_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>3</p>
-												<div class="rating">
-													<input type="radio" id="star1-5"  value="5">
-													<label for="star1-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star1-4"  value="4">
-													<label for="star1-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star1-3"  value="3">
-													<label for="star1-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star1-2"  value="2">
-													<label for="star1-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star1-1"  value="1">
-													<label for="star1-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -531,7 +669,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -539,22 +677,18 @@
 									<a href="vino_2.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/7Xzfa-zUQ2G_udWGfQD6qw_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>2</p>
-												<div class="rating">
-													<input type="radio" id="star2-5"  value="5">
-													<label for="star2-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star2-4"  value="4">
-													<label for="star2-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star2-3"  value="3">
-													<label for="star2-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star2-2"  value="2">
-													<label for="star2-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star2-1"  value="1">
-													<label for="star2-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -567,7 +701,7 @@
 					</div>
 				</div>
 				
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -575,22 +709,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/p95-XVTqQ3qdQ56bGs3ALQ_pb_x600.png" alt="" ></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>4</p>
-												<div class="rating">
-													<input type="radio" id="star3-5"  value="5">
-													<label for="star3-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star3-4"  value="4">
-													<label for="star3-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star3-3"  value="3">
-													<label for="star3-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star3-2"  value="2">
-													<label for="star3-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star3-1"  value="1">
-													<label for="star3-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -602,7 +732,7 @@
 					
 					</div>
 				</div>
-				<div class="container" style="margin-left:30px;" >
+				<div class="container_wine" style="margin-left:30px;" >
 					<div class="line_block">
 						<table>
 							<tr>
@@ -610,22 +740,18 @@
 									<a href="vino_1.html" target="_blank"><img style="padding-left:10px;" class="container-img" src="https://images.vivino.com/thumbs/n_mIrdWlQ-utMRW0VlOAEQ_pb_x600.png" alt=""></a>
 								</th>
 								
-								<th>
-									<table style="padding-left:10px;">
+								<th style="padding-left:8px;">
+									<table >
 										<tr>
 											<th>
-												<p>5</p>
-												<div class="rating">
-													<input type="radio" id="star4-5"  value="5">
-													<label for="star4-5" title="Оценка «5»"></label>	
-													<input type="radio" id="star4-4"  value="4">
-													<label for="star4-4" title="Оценка «4»"></label>    
-													<input type="radio" id="star4-3"  value="3">
-													<label for="star4-3" title="Оценка «3»"></label>  
-													<input type="radio" id="star4-2"  value="2">
-													<label for="star4-2" title="Оценка «2»"></label>    
-													<input type="radio" id="star4-1"  value="1">
-													<label for="star4-1" title="Оценка «1»"></label>
+												<form id="fld3">
+													<input id="question1" class="rating rating-loading">
+													<input id="question2" class="rating rating-loading">
+													<input id="question3" class="rating rating-loading">
+												</form>
+												<div class="entirety">
+													<p class="amount">Общая оценка</p>
+													<p id='d3'>0</p>
 												</div>
 											</th>
 										</tr>
@@ -652,7 +778,153 @@
 			<span class="dot" onclick="currentSlide(3)"></span> 
 		</div>
 		
+	
 		
+		<script>
+			$(document).ready(function() {
+			  var inputs = document.getElementById('fld').getElementsByTagName('input');
+			
+			  function ww() {
+				var val = 0;
+				for (var i = 0; i < inputs.length; i++) {
+				  val += +inputs[i].value;
+				};
+				val = (val / inputs.length).toFixed(2);
+				document.getElementById('d').textContent = val;
+			  }
+			
+			  for (var i = 0; i < inputs.length; i++) {
+				var input = inputs[i];
+			
+				$(input).rating('create');
+			
+				$(input).rating({
+				  glyphicon: true,
+				  stars: 5,
+				  min: 0,
+				  max: 5,
+				  step: 1,
+				  showClear: false,
+				  size: 'xs'
+				});
+			
+				$(input).on('rating.change', function(event, value) {
+				  console.log(value);
+				  ww(); // <-- Вызываем пересчёт
+				});
+			  }
+			
+			});
+		</script>
+
+<script>
+			$(document).ready(function() {
+			  var inputs = document.getElementById('fld1').getElementsByTagName('input');
+			
+			  function ww() {
+				var val = 0;
+				for (var i = 0; i < inputs.length; i++) {
+				  val += +inputs[i].value;
+				};
+				val = (val / inputs.length).toFixed(2);
+				document.getElementById('d1').textContent = val;
+			  }
+			
+			  for (var i = 0; i < inputs.length; i++) {
+				var input = inputs[i];
+			
+				$(input).rating('create');
+			
+				$(input).rating({
+				  glyphicon: true,
+				  stars: 5,
+				  min: 0,
+				  max: 5,
+				  step: 1,
+				  showClear: false,
+				  size: 'xs'
+				});
+			
+				$(input).on('rating.change', function(event, value) {
+				  console.log(value);
+				  ww(); // <-- Вызываем пересчёт
+				});
+			  }
+			
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+			  var inputs = document.getElementById('fld2').getElementsByTagName('input');
+			
+			  function ww() {
+				var val = 0;
+				for (var i = 0; i < inputs.length; i++) {
+				  val += +inputs[i].value;
+				};
+				val = (val / inputs.length).toFixed(2);
+				document.getElementById('d2').textContent = val;
+			  }
+			
+			  for (var i = 0; i < inputs.length; i++) {
+				var input = inputs[i];
+			
+				$(input).rating('create');
+			
+				$(input).rating({
+				  glyphicon: true,
+				  stars: 5,
+				  min: 0,
+				  max: 5,
+				  step: 1,
+				  showClear: false,
+				  size: 'xs'
+				});
+			
+				$(input).on('rating.change', function(event, value) {
+				  console.log(value);
+				  ww(); // <-- Вызываем пересчёт
+				});
+			  }
+			
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+			  var inputs = document.getElementById('fld3').getElementsByTagName('input');
+			
+			  function ww() {
+				var val = 0;
+				for (var i = 0; i < inputs.length; i++) {
+				  val += +inputs[i].value;
+				};
+				val = (val / inputs.length).toFixed(2);
+				document.getElementById('d3').textContent = val;
+			  }
+			
+			  for (var i = 0; i < inputs.length; i++) {
+				var input = inputs[i];
+			
+				$(input).rating('create');
+			
+				$(input).rating({
+				  glyphicon: true,
+				  stars: 5,
+				  min: 0,
+				  max: 5,
+				  step: 1,
+				  showClear: false,
+				  size: 'xs'
+				});
+			
+				$(input).on('rating.change', function(event, value) {
+				  console.log(value);
+				  ww(); // <-- Вызываем пересчёт
+				});
+			  }
+			
+			});
+		</script>
 
 <script>
 var slideIndex = 1;
@@ -681,8 +953,26 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+</script>
+<script>
+window.onload = function() {
+  var body = document.getElementById('body');
+  var links = document.querySelectorAll('a');  
+  
+  links.forEach(function (link) {
+    link.addEventListener('click', onLinkClicked);
+    
+    function onLinkClicked(event) {
+      event.preventDefault();
+      body.classList.remove('animated-show-active')
+      setTimeout(onAnimationComplete, 1500);
+    }
 
-
+    function onAnimationComplete() {
+      window.location = link.href;  
+    }
+  });
+}
 </script>
        
     </body>

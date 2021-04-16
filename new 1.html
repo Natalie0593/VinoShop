@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Спейся, не упейся!</title>
+		<style>
+			.rating {
+				display: flex;
+				align-items: flex-end;
+				font-size: 30px;
+				line-height: 0.75;
+				transition: opacity 0.3s ease 0s;
+			}
+			.rating.rating_sending {
+				opacity: 0.2;
+			}
+			.rating.rating_set .rating__active,
+			.rating.rating_set .rating__item {
+				cursor: pointer;
+			}
+
+			.rating__body {
+				position: relative;
+			}
+			.rating__body::before {
+				content: "★★★★★";
+				display: block;
+			}
+			.rating__active {
+				position: absolute;
+				width: 0%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+			}
+			.rating__active::before {
+				content: "★★★★★";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				color: #ffd300;
+			}
+
+			.rating__items {
+				display: flex;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+			.rating__item {
+				flex: 0 0 20%;
+				height: 100%;
+				opacity: 0;
+			}
+			.rating__value {
+				font-size: 50%;
+				line-height: 1;
+				padding: 0px 0px 0px 10px;
+			}
+		</style>
+	</head>
+
+    <body style="height:50px;width:30px;">
+	
+
+		<div class="rating rating_set">
+			<div class="rating__body">
+				<div class="rating__active"></div>
+				<div class="rating__items">
+					<input type="radio" class="rating__item" value="1" name="rating">
+					<input type="radio" class="rating__item" value="2" name="rating">
+					<input type="radio" class="rating__item" value="3" name="rating">
+					<input type="radio" class="rating__item" value="4" name="rating">
+					<input type="radio" class="rating__item" value="5" name="rating">
+				</div>
+			</div>
+			<div class="rating__value">2.6</div>
+		</div>
+	
+
+	
+
+
+<script>
+		const ratings = document.querySelectorAll('.rating');
+		if (ratings.length > 0) {
+			initRatings();
+		}
+
+		// Основная функция
+		function initRatings() {
+			let ratingActive, ratingValue;
+			// "Бегаем" по всем рейтингам на странице
+			for (let index = 0; index < ratings.length; index++) {
+				const rating = ratings[index];
+				initRating(rating);
+			}
+
+			// Инициализируем конкретный рейтинг
+			function initRating(rating) {
+				initRatingVars(rating);
+
+				setRatingActiveWidth();
+
+				if (rating.classList.contains('rating_set')) {
+					setRating(rating);
+				}
+			}
+
+			// Инициализайция переменных
+			function initRatingVars(rating) {
+				ratingActive = rating.querySelector('.rating__active');
+				ratingValue = rating.querySelector('.rating__value');
+			}
+			// Изменяем ширину активных звезд
+			function setRatingActiveWidth(index = ratingValue.innerHTML) {
+				const ratingActiveWidth = index / 0.05;
+				ratingActive.style.width = `${ratingActiveWidth}%`;
+			}
+			// Возможность указать оценку 
+			function setRating(rating) {
+				const ratingItems = rating.querySelectorAll('.rating__item');
+				for (let index = 0; index < ratingItems.length; index++) {
+					const ratingItem = ratingItems[index];
+					ratingItem.addEventListener("mouseenter", function (e) {
+						// Обновление переменных
+						initRatingVars(rating);
+						// Обновление активных звезд
+						setRatingActiveWidth(ratingItem.value);
+					});
+					ratingItem.addEventListener("mouseleave", function (e) {
+						// Обновление активных звезд
+						setRatingActiveWidth();
+					});
+					ratingItem.addEventListener("click", function (e) {
+						// Обновление переменных
+						initRatingVars(rating);
+
+						if (rating.dataset.ajax) {
+							// "Отправить" на сервер
+							setRatingValue(ratingItem.value, rating);
+						} else {
+							// Отобразить указанную оцнку
+							ratingValue.innerHTML = index + 1;
+							setRatingActiveWidth();
+						}
+					});
+				}
+			}
+
+
+		}
+	</script>		
+	</body>
+	
+</html>

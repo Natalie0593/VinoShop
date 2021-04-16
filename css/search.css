@@ -99,43 +99,7 @@
 			padding-top:20px;
 			text-align:center;
 			}
-			.rating {
-	}
-.rating:not(:checked) > input {
-	display: none;
-}
-.rating:not(:checked) > label {
-	width: 21px;
-	float: right;
-	padding: 0;
-	cursor: pointer;
-	font-size: 28px;
-	line-height: 28px;
-	color: lightgrey;
-	text-shadow: 1px 1px #bbb;
-}
-.rating:not(:checked) > label:before {
-	content: '★';
-}
-.rating > input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px #c60;
-}
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-	color: gold;
-}
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
-}
-.rate > label:active {
-	position: relative;
-	}
+
 	.table-left{
 	text-align: left;
 	}

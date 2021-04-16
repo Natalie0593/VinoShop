@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="css/search.css" type="text/css"/>
         <meta charset="utf-8">
         <title>Спейся, не упейся!</title>
+		
 		<style>
 			html, body {
 				box-sizing: border-box;
@@ -202,52 +203,7 @@
 			padding-top:20px;
 			text-align:center;
 			}
-			.rating {
-				}
-			.rating:not(:checked) > input {
-				display: none;
-			}
-			.rating:not(:checked) > label {
-				width: 21px;
-				float: right;
-				padding: 0;
-				cursor: pointer;
-				font-size: 28px;
-				line-height: 28px;
-				color: lightgrey;
-				text-shadow: 1px 1px #bbb;
-			}
-			.rating:not(:checked) > label:before {
-				content: '★';
-			}
-			.rating > input:checked ~ label {
-				color: gold;
-				text-shadow: 1px 1px #c60;
-			}
-			.rating:not(:checked) > label:hover,
-			.rating:not(:checked) > label:hover ~ label {
-				color: gold;
-			}
-			.rating > input:checked + label:hover,
-			.rating > input:checked + label:hover ~ label,
-			.rating > input:checked ~ label:hover,
-			.rating > input:checked ~ label:hover ~ label,
-			.rating > label:hover ~ input:checked ~ label {
-				color: gold;
-				text-shadow: 1px 1px goldenrod;
-			}
-			.rate > label:active {
-				position: relative;
-				}
-				.table-left{
-				text-align: left;
-				}
-				.link {
-			   color: #fff;
-			   border-radius: 3px;
-			   text-decoration: none;
-			   text-align:center;
-			}
+			
 			.line_block-header {  
 			float:left; 
 			text-align:center;
@@ -346,6 +302,67 @@
 			}
 			li {
 				list-style-type: none; /* Убираем маркеры */
+			}
+			<!------------------------------------------------------>
+			.rating {
+				display: flex;
+				align-items: flex-end;
+				font-size: 40px;
+				line-height: 0.75;
+				transition: opacity 0.3s ease 0s;
+			}
+			.rating.rating_sending {
+				opacity: 0.2;
+			}
+			.rating.rating_set .rating__active,
+			.rating.rating_set .rating__item {
+				cursor: pointer;
+			}
+
+			.rating__body {
+				margin-left: 190px;
+				position: relative;
+			}
+			.rating__body::before {
+				content: "★★★★★";
+			}
+			.rating__active {
+				position: absolute;
+				width: 0%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+			}
+			.rating__active::before {
+				content: "★★★★★";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				color: #ffd300;
+			}
+
+			.rating__items {
+				display: flex;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+			.rating__item {
+				/*flex: 0 0 20%;*/
+				height: 100%;
+				opacity: 0;
+				margin: 0;
+				padding: 0;
+			}
+			.rating__value {
+				font-size: 20px;
+				line-height: 1;
+				padding: 0px 0px 0px 10px;
 			}
 		</style>
      </head>
@@ -568,8 +585,11 @@
 										<a href="" target="_blank"><img style="width:60px;height:220px;" alt="" src="https://images.vivino.com/thumbs/CbjCX1G9QOawd5UDGNy7sg_pb_x600.png"></a>
 									</div>
 								</th>
-																					
+								
+																				
 							</tr>
+							
+							
 						</table>
 					</div>
 						</div>
@@ -577,29 +597,26 @@
 								<p>La Rioja Alta</p>
 								<p>Viña Ardanza Reserva 2012</p>
 							    <p>Red wine from Rioja Spain</p>
+								
 							</div>
-							<table style="padding-left:10px;">
-								<tr>
-									<th>
-										<p>3</p>
-									</th>
-									<th>
-										<div class="rating">
-											<input type="radio" id="star1-5"  value="5">
-											<label title="Оценка «5»"></label>	
-											<input type="radio" id="star1-4"  value="4">
-											<label  title="Оценка «4»"></label>    
-											<input type="radio" id="star1-3"  value="3">
-											<label  title="Оценка «3»"></label>  
-											<input type="radio" id="star1-2"  value="2">
-											<label  title="Оценка «2»"></label>    
-											<input type="radio" id="star1-1"  value="1">
-											<label  title="Оценка «1»"></label>
+							
+									<!--<object type="text/html" data="new 1.html" style="margin-left:200px;"></object>-->
+									
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
 										</div>
-									</th>
-								</tr>
-							</table>
-							<div style="padding-top:50px;">
+										<div class="rating__value">5</div>
+									</div>
+								
+									<div style="padding-top:50px;">
 								<button class="btn1">View shops</button>
 							</div>		
 							
@@ -628,27 +645,19 @@
 								<p>Amaranto Sangiovese 2018</p>
 								<p>Red wine from Maremma Toscana Italy</p>
 							</div>
-						<table style="padding-left:10px;">
-							<tr>
-								<th>
-									<p>4</p>
-								</th>
-								<th>
-									<div class="rating">
-										<input type="radio" id="star1-5"  value="5">
-										<label title="Оценка «5»"></label>	
-										<input type="radio" id="star1-4"  value="4">
-										<label  title="Оценка «4»"></label>    
-										<input type="radio" id="star1-3"  value="3">
-										<label  title="Оценка «3»"></label>  
-										<input type="radio" id="star1-2"  value="2">
-										<label  title="Оценка «2»"></label>    
-										<input type="radio" id="star1-1"  value="1">
-										<label  title="Оценка «1»"></label>
+						<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">2</div>
 									</div>
-								</th>
-							</tr>
-						</table>
 						<div style="padding-top:50px;">
 							<button class="btn1">View shops</button>
 						</div>	
@@ -677,27 +686,19 @@
 							<p>Ribera del Duero Crianza 2017</p>
 							<p>Red wine from Ribera del Duero Spain</p>
 						</div>
-						<table style="padding-left:10px;">
-							<tr>
-								<th>
-									<p>2</p>
-								</th>
-								<th>
-									<div class="rating">
-										<input type="radio" id="star1-5"  value="5">
-										<label title="Оценка «5»"></label>	
-										<input type="radio" id="star1-4"  value="4">
-										<label  title="Оценка «4»"></label>    
-										<input type="radio" id="star1-3"  value="3">
-										<label  title="Оценка «3»"></label>  
-										<input type="radio" id="star1-2"  value="2">
-										<label  title="Оценка «2»"></label>    
-										<input type="radio" id="star1-1"  value="1">
-										<label  title="Оценка «1»"></label>
+						<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">1</div>
 									</div>
-								</th>
-							</tr>
-						</table>
 						<div style="padding-top:50px;">
 							<button class="btn1">View shops</button>
 						</div>
@@ -725,27 +726,19 @@
 							<p>Rías Baixas Albariño 2019</p>
 							<p>White wine from Rías Baixas Spain</p>
 						</div>
-						<table style="padding-left:10px;">
-							<tr>
-								<th>
-									<p>5</p>
-								</th>
-								<th>
-									<div class="rating">
-										<input type="radio" id="star1-5"  value="5">
-										<label title="Оценка «5»"></label>	
-										<input type="radio" id="star1-4"  value="4">
-										<label  title="Оценка «4»"></label>    
-										<input type="radio" id="star1-3"  value="3">
-										<label  title="Оценка «3»"></label>  
-										<input type="radio" id="star1-2"  value="2">
-										<label  title="Оценка «2»"></label>    
-										<input type="radio" id="star1-1"  value="1">
-										<label  title="Оценка «1»"></label>
+						<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">4</div>
 									</div>
-								</th>
-							</tr>
-						</table>
 						<div style="padding-top:50px;">
 							<button class="btn1">View shops</button>
 						</div>
@@ -775,27 +768,19 @@
 											<p>Viña Alberdi Reserva 2015</p>
 											<p>Red wine from Rioja Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>2</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star5-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star5-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star5-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star5-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star5-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -825,27 +810,19 @@
 											<p>Crianza Tinto 2017</p>
 											<p>Red wine from Ribera del Duero Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>5</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star6-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star6-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star6-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star6-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star6-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">3</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -875,27 +852,19 @@
 											<p>Legítim Crianza 2017</p>
 											<p>Red wine from Priorat Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>1</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star7-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star7-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star7-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star7-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star7-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">2</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -925,27 +894,19 @@
 											<p>Rully Montagne La Folie 2018</p>
 											<p>White wine from Rully France</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>2</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star8-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star8-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star8-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star8-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star8-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">1</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -975,27 +936,19 @@
 											<p>No. 2 Victoria 2017</p>
 											<p>Dessert wine from Málaga Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>4</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star9-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star9-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star9-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star9-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star9-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">3</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -1025,27 +978,19 @@
 											<p>Nicolás Albariño 2015</p>
 											<p>White wine from Rías Baixas Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>5</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star10-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star10-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="sta10-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star10-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star10-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">4</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -1075,27 +1020,19 @@
 											<p>Dido La Solució Rosa 2018</p>
 											<p>Rosé wine from Montsant Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>5</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star11-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star11-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star11-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star11-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star11-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">2</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
@@ -1125,34 +1062,109 @@
 											<p>Legítim Crianza 2017</p>
 											<p>Red wine from Priorat Spain</p>
 										</div>
-										<table style="padding-left:10px;">
-											<tr>
-												<th>
-													<p>1</p>
-												</th>
-												<th>
-													<div class="rating">
-														<input type="radio" id="star7-5"  value="5">
-														<label  title="Оценка «5»"></label>	
-														<input type="radio" id="star7-4"  value="4">
-														<label  title="Оценка «4»"></label>    
-														<input type="radio" id="star7-3"  value="3">
-														<label title="Оценка «3»"></label>  
-														<input type="radio" id="star7-2"  value="2">
-														<label title="Оценка «2»"></label>    
-														<input type="radio" id="star7-1"  value="1">
-														<label title="Оценка «1»"></label>
-													</div>
-												</th>
-											</tr>
-										</table>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
 										<div style="padding-top:50px;">
 										<button class="btn1">View shops</button>
 										</div>
 		</div>
 		</li>
 	</div>
-	
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box wisteria">
+		<div class="line_block">
+										
+											<div>
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
+													<tr>
+														<th style="width:150px;height:220px;">
+																<div >
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/rTKVzbP1TFWaGLuWFR6RBg_pb_x600.png"></a>
+																</div>
+														</th>
+														
+													</tr>
+												</table>
+											</div>
+										</div>
+										<div class="info-vine" >
+											<p>De Muller</p>
+											<p>Legítim Crianza 2017</p>
+											<p>Red wine from Priorat Spain</p>
+										</div>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">1</div>
+									</div>
+										<div style="padding-top:50px;">
+										<button class="btn1">View shops</button>
+										</div>
+		</div>
+		</li>
+	</div>
+	<div id="filter-list">
+		<li>
+		<div class="col-auto box wisteria">
+		<div class="line_block">
+										
+											<div>
+												<table style="background-color:#a0a0a4;border-radius: 5px;">
+													<tr>
+														<th style="width:150px;height:220px;">
+																<div >
+																	<a href="" target="_blank"><img style="width:60px;height:220px; " alt="" src="https://images.vivino.com/thumbs/rTKVzbP1TFWaGLuWFR6RBg_pb_x600.png"></a>
+																</div>
+														</th>
+														
+													</tr>
+												</table>
+											</div>
+										</div>
+										<div class="info-vine" >
+											<p>De Muller</p>
+											<p>Legítim Crianza 2017</p>
+											<p>Red wine from Priorat Spain</p>
+										</div>
+										<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">2</div>
+									</div>
+										<div style="padding-top:50px;">
+										<button class="btn1">View shops</button>
+										</div>
+		</div>
+		</li>
+	</div>
 		
 </div>
 	<script>
@@ -1175,32 +1187,117 @@
 		});
 		
 		
-let filter = function () {
-		let input = document.getElementById('filter-input');
-
-		input.addEventListener('keyup', function () {
-        let filter = input.value.toLowerCase(),
-            filterElements = document.querySelectorAll('#filter-list li');
-
-        filterElements.forEach(item => {
-	
-            if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
-			
-                item.style.display = ''; //весь блок покаать
-				
-            } else {
-				
-                item.style.display = 'none'; // весь блок скрыть
-					
-            }
-        })
-
-    })
-
-};
-
-filter();
 		
+		let filter = new Promise(function(resolve, reject) {
+				
+					let input = document.getElementById('filter-input');
+
+					input.addEventListener('keyup', function () {
+						let filter = input.value.toLowerCase(),
+							filterElements = document.querySelectorAll('#filter-list li');
+
+						filterElements.forEach(item => {
+					
+							if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
+							
+								item.style.display = ''; //весь блок покаать
+								setTimeout(() => resolve("done!"), 2000);
+								
+							} else {
+								
+								item.style.display = 'none'; // весь блок скрыть
+									
+							}
+							
+						})
+
+					})
+					
+		});
+		
+		
+		filter.then(
+		  result => alert(result), // выведет "done!" через одну секунду
+		  error => alert(error) // не будет запущена
+		);
+		filter.finally(() => alert("Промис завершён"));	
+		
+		async function activeFilter(){
+			var x = await filter();
+		}
+		
+		activeFilter();
+	
+	</script>
+	<script>
+		const ratings = document.querySelectorAll('.rating');
+		if (ratings.length > 0) {
+			initRatings();
+		}
+
+		// Основная функция
+		function initRatings() {
+			let ratingActive, ratingValue;
+			// "Бегаем" по всем рейтингам на странице
+			for (let index = 0; index < ratings.length; index++) {
+				const rating = ratings[index];
+				initRating(rating);
+			}
+
+			// Инициализируем конкретный рейтинг
+			function initRating(rating) {
+				initRatingVars(rating);
+
+				setRatingActiveWidth();
+
+				if (rating.classList.contains('rating_set')) {
+					setRating(rating);
+				}
+			}
+
+			// Инициализайция переменных
+			function initRatingVars(rating) {
+				ratingActive = rating.querySelector('.rating__active');
+				ratingValue = rating.querySelector('.rating__value');
+			}
+			// Изменяем ширину активных звезд
+			function setRatingActiveWidth(index = ratingValue.innerHTML) {
+				const ratingActiveWidth = index / 0.05;
+				ratingActive.style.width = `${ratingActiveWidth}%`;
+			}
+			// Возможность указать оценку 
+			function setRating(rating) {
+				const ratingItems = rating.querySelectorAll('.rating__item');
+				for (let index = 0; index < ratingItems.length; index++) {
+					const ratingItem = ratingItems[index];
+					ratingItem.addEventListener("mouseenter", function (e) {
+						// Обновление переменных
+						initRatingVars(rating);
+						// Обновление активных звезд
+						setRatingActiveWidth(ratingItem.value);
+					});
+					ratingItem.addEventListener("mouseleave", function (e) {
+						// Обновление активных звезд
+						setRatingActiveWidth();
+					});
+					ratingItem.addEventListener("click", function (e) {
+						// Обновление переменных
+						initRatingVars(rating);
+
+						if (rating.dataset.ajax) {
+							// "Отправить" на сервер
+							setRatingValue(ratingItem.value, rating);
+						} else {
+							// Отобразить указанную оцнку
+							ratingValue.innerHTML = index + 1;
+							setRatingActiveWidth();
+						}
+					});
+				}
+			}
+
+
+		}
 	</script>
 	</body>
 </html>

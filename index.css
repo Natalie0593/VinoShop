@@ -1,0 +1,201 @@
+            .header{
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -50vw;
+				width: 100vw;
+				height: 130px;
+				background-color: #ad0028;
+			}
+
+			* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+
+
+/* Slideshow container */
+.slideshow-container {
+  height:320px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.container_wine{
+	z-index: 1000;
+width: 210px;
+height:320px;
+display: inline-block;
+background-color:#e9edf5;
+padding-bottom:5px;
+}
+
+.container-img{
+width: 70px;
+height:230px;
+}
+
+.container-txt{
+height:50px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.image-caption {
+  position: absolute;
+  background-color: #ff000075;
+  bottom: 4px;
+  width: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade_wine {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade_wine {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade_wine {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+			
+			.line_block {  
+			 float:left; 
+        		 margin: 0 15px 15px 0; 
+       			 text-align:center;
+        		 padding: 10px;
+			}
+	
+			.table{
+			 height:650px;
+			 background-color:#f2e6e8;
+			}
+			.link {
+			   color: #fff;
+			   border-radius: 3px;
+			   text-decoration: none;
+			   text-align:center;
+			}
+			.name-cite{
+				 color: white;
+				 font-family: «Great Vibes», cursive;
+				 font-size: 25px;
+				 line-height: 20px;
+				 font-weight: normal;
+
+				 text-align: center;
+				 text-shadow: 0 1px 1px #fff;
+			 }
+		 input[type=text] {
+			width: 150px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 50px;
+			font-size: 16px;
+			outline: none;
+			border: none;
+			background-color: white;
+			background-image: url('img/search_ico.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 12px 20px 12px 40px;
+			transition: width 0.4s ease-in-out;
+		}
+
+		input[type=text]:focus {
+			width: 350px;
+		}
+		
+		.image_btn{
+			background-image: url('../img/vino.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.image_btn2{
+			background-image: url('../img/grapes.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.image_btn3{
+			background-image: url('../img/pairings.ico');
+			background-size: 20px 20px;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 15px;
+			transition: width 0.4s ease-in-out;
+			}
+			.name_v{
+			color: #333333;
+			font-family: Georgia, serif; font-size: 15px;
+			}
